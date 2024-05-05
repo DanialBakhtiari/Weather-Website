@@ -8,7 +8,63 @@
   <link rel="stylesheet" href="../style/output.css">
 </head>
 
-<body>
+<body class=" py-[63px] pr-[87px] pl-[80px]">
+  <svg class="hidden">
+    <symbol id="currentLocation" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+    </symbol>
+    <symbol id="search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+      stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round"
+        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+    </symbol>
+
+
+  </svg>
+  <section class="flex justify-around items-center">
+    <!-- ? Dark/Light Mode Toggel -->
+    <div class="">
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="checkbox" value="" class="sr-only peer">
+        <span class="me-3 text-sm font-medium text-gray-900 dark:text-gray-300">Dark</span>
+        <div class="relative w-11 h-6 bg-black peer-focus:outline-none  rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-yellow-400">
+        </div>
+        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Light</span>
+      </label>
+    </div>
+    <!-- ? Search Bar-->
+    <div class="">
+      <form class="w-[621px] overflow-hidden rounded-full">
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 cursor-pointer">
+            <svg class="w-8 h-8">
+              <use href="#search"></use>
+            </svg>
+          </div>
+          <input type="search" id="default-search"
+            class="block w-full p-4 ps-12 text-sm  border rounded-lg bg-searchbar focus-visible:outline-none"
+            placeholder="Search for your preffered city...">
+        </div>
+      </form>
+    </div>
+    <!-- ? Current Location btn-->
+    <div class="">
+      <button type="button"
+        class="text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-1 focus:ring-green-400 rounded-full text-xl font-bold px-3 py-[13px] me-2 flex items-center">
+        <svg class="w-7 h-7">
+          <use href="#currentLocation"></use>
+        </svg>
+        Current Location
+      </button>
+    </div>
+    
+
+
+  </section>
+
   <script type="module" src="../js/script.js"></script>
 </body>
 
