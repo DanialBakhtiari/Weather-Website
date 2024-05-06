@@ -3,13 +3,67 @@
 @tailwind utilities;
 
 @layer base {
-    body{
-        background-image: linear-gradient(120deg, rgb(17, 17, 71) 30% , rgb(36, 60, 92));
-        height: 100vh;
-        /* background-position: ;
-        height: 100vh; */
-        /* background-image: url(../src/images/suny.jpg); */
-        /* background-size: fill;
+    body,
+    html {
+        @apply h-full  
+    }
+    
+}
+
+@layer components {
+    .cloudy {
+        height: 100%;
+        background-image: url(../src/images/cloudy.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .fogy {
+        height: 100%;
+        background-image: url(../src/images/fogy.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .lightning {
+        height: 100%;
+        background-image: url(../src/images/lightning.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .rainy {
+        height: 100%;
+        background-image: url(../src/images/rainy.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .snowy {
+        height: 100%;
+        background-image: url(../src/images/snow.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .storm {
+        height: 100%;
+        background-image: url(../src/images/storm.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .sun_wind {
+        height: 100%;
+        background-image: url(../src/images/sun-wind.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .sunny {
+        height: 100%;
+        background-image: url(../src/images/suny.jpg);
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -24,8 +78,9 @@
     .flex_center {
         @apply flex justify-center items-center
     }
-    
+
     .glassmorphism {
         @apply bg-boxLight bg-opacity-40 backdrop-blur-lg
     }
+    
 }
