@@ -79,4 +79,7 @@
         @apply flex justify-center items-center
     }
     
+    .glassmorphism {
+        @apply bg-boxLight bg-opacity-40 backdrop-blur-lg
+    }
 }
