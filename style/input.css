@@ -79,11 +79,11 @@
   }
 
   .glassmorphism {
-    @apply bg-boxLight bg-opacity-20 backdrop-blur-md;
+    @apply bg-boxLight bg-opacity-40 backdrop-blur-md;
   }
 
   .glassmorphism2 {
-    @apply bg-cyan-700 bg-opacity-40 backdrop-blur-lg;
+    @apply bg-cyan-700 bg-opacity-60 backdrop-blur-lg;
   }
 
 }
