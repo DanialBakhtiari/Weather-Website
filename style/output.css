@@ -446,10 +446,33 @@ video {
   display: none;
 }
 
-body,
-    html {
-  height: 100%;
+body{
+  background-image: linear-gradient(120deg, rgb(17, 17, 71) 30% , rgb(36, 60, 92));
+  height: 100vh;
+  /* background-position: ;
+        height: 100vh; */
+  /* background-image: url(../src/images/suny.jpg); */
+  /* background-size: fill;
+        background-repeat: no-repeat;
+         */
+  /* margin: 0;
+         padding: 0;
+
+         background-repeat: no-repeat;
+        background-size: contain;
+         height: 100vh;
+         background-position-x: left;
+         background-position-y: top; */
 }
+
+/* .blurBox{
+    background: rgba(147, 176, 181, 0.51);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.6px);
+    -webkit-backdrop-filter: blur(10.6px);
+    border: 1px solid rgba(147, 176, 181, 0.69);   
+    } */
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
@@ -766,16 +789,6 @@ body,
 .bg-boxLight {
   --tw-bg-opacity: 1;
   background-color: rgb(147 176 181 / var(--tw-bg-opacity));
-}
-
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-}
-
-.bg-searchbar {
-  --tw-bg-opacity: 1;
-  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-40 {
