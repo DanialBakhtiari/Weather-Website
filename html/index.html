@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../style/output.css" />
   </head>
 
-  <body class="py-[63px] pr-[87px] pl-[80px] mobile:p-[33px] rainy">
+  <body class="py-[63px] pr-[87px] pl-[80px] mobile:p-[33px] tablet:p-[33px] laptop:p-[65px] rainy">
     <!-- ? SVG Sprite -->
     <svg class="hidden">
       <symbol
@@ -302,7 +302,7 @@
           ></path>
           <rect
             id="Transparent_Rectangle"
-            data-name="<Transparent Rectangle>"
+            data-name="Transparent Rectangle"
             class="cls-1"
             width="32"
             height="32"
@@ -316,13 +316,13 @@
       <div class="mobile:mr-1 tablet:mr-2">
         <label class="inline-flex items-center cursor-pointer">
           <input type="checkbox" value="" class="sr-only peer" />
-          <span class="me-3 text-sm font-medium text-white mobile:hidden"
+          <span class="me-3 text-sm font-medium  text-white mobile:hidden laptop:me-2 laptop:text-xs"
             >Dark</span
           >
           <div
             class="relative w-11 h-6 bg-black peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-400"
           ></div>
-          <span class="ms-3 text-sm font-medium text-white mobile:hidden"
+          <span class="ms-3 text-sm font-medium  text-white mobile:hidden laptop:ms-2 laptop:text-xs"
             >Light</span
           >
         </label>
@@ -330,7 +330,7 @@
       <!-- ? Search Bar-->
       <div class="">
         <form
-          class="w-[621px] overflow-hidden rounded-full mobile:w-[218px] mobile:mr-1 tablet:w-[230px] tablet:mr-2"
+          class="w-[621px] overflow-hidden rounded-full mobile:w-[218px] mobile:mr-1 tablet:w-[230px] tablet:mr-2 laptop:mr-1 laptop:max-w-[410px]"
         >
           <div class="relative">
             <div
@@ -353,12 +353,12 @@
       <div class="">
         <button
           type="button"
-          class="text-white bg-green-500 hover:bg-green-600 focus:outline-none rounded-full text-xl font-bold px-3 py-[13px] me-2 flex items-center dark:bg-boxDark dark:text-green-500 mobile:w-[85px] mobile:h-[45px] mobile:flex_center tablet:w-[90px] tablet:h-[45px] tablet:flex_center"
+          class="text-white bg-green-500 hover:bg-green-600 focus:outline-none rounded-full text-xl font-bold px-3 py-[13px] me-2 flex items-center dark:bg-boxDark dark:text-green-500 mobile:w-[85px] mobile:h-[45px] mobile:flex_center tablet:w-[90px] tablet:h-[45px] tablet:flex_center  "
         >
-          <svg class="w-7 h-7">
+          <svg class="w-7 h-7 laptop:w-5 laptop:h-5">
             <use href="#currentLocation"></use>
           </svg>
-          <span class="mobile:hidden tablet:hidden">Current Location</span>
+          <span class="text-lg mobile:hidden tablet:hidden laptop:text-sm text-nowrap btnloc:hidden"><span class=" laptop:hidden">Current</span> Location</span>
         </button>
       </div>
     </section>
@@ -366,12 +366,12 @@
       class="w-full h-auto flex_center mt-12 gap-[55px] mobile:flex-col tablet:flex-col"
     >
       <div
-        class="w-[510px] h-[330px] rounded-2xl mobile:w-[370px] tablet:w-[480px] tablet:h-[300px]"
+        class="w-[510px] h-[330px]  rounded-2xl mobile:w-[370px] tablet:w-[480px] tablet:h-[300px]"
       >
         <div
           class="w-full h-full glassmorphism rounded-2xl flex_center dark:dark_glassmorphism"
         >
-          <div class="w-fit h-auto flex_center flex-col space-y-8">
+          <div class="w-fit h-auto  flex_center flex-col space-y-8">
             <h1 class="text-4xl text-white font-bold">Toronto</h1>
             <time class="text-6xl mx-auto font-extrabold text-white"
               >19:55</time
@@ -383,13 +383,13 @@
         </div>
       </div>
       <div
-        class="w-[780px] h-[330px] rounded-2xl mobile:w-[370px] mobile:h-[600px] tablet:w-[480px] tablet:h-[600px]"
+        class="w-[780px] h-[330px] rounded-2xl mobile:w-[370px] mobile:h-[600px] tablet:w-[480px] tablet:h-[600px] "
       >
         <div
           class="w-full h-full glassmorphism rounded-2xl flex_center dark:dark_glassmorphism mobile:flex-wrap tablet:flex-wrap"
         >
           <div
-            class="w-1/3 h-auto flex-center flex-col space-y-8 px-6 pb-6 pt-4 text-white mobile:w-1/2 mobile:pb-4 tablet:w-1/2 tablet:pb-4"
+            class="w-1/3 h-auto flex-center flex-col space-y-8 px-6 pb-6 pt-4 text-white mobile:w-1/2 mobile:pb-4 tablet:w-1/2 tablet:pb-4 laptop:px-4"
           >
             <span class="w-full block text-6xl mx-auto font-extrabold"
               >75°C</span
@@ -406,7 +406,7 @@
           <div
             class="w-1/3 h-fit flex flex-col items-center justify-center gap-6 pb-9 text-white mobile:w-1/2 tablet:w-1/2"
           >
-            <svg class="block w-[180px] mx-auto">
+            <svg class="block w-[180px] mx-auto laptop:w-[130px]">
               <use href="#sun" fill="#F6B17A"></use>
             </svg>
             <h1 class="text-3xl font-bold block text-center">Sunny</h1>
@@ -414,36 +414,36 @@
           <div
             class="w-1/3 h-fit flex flex-col text-white mobile:w-full mobile:pb-3 tablet:w-full tablet:pb-3"
           >
-            <div class="flex pt-6">
+            <div class="flex pt-6 laptop:pt-0">
               <div class="w-1/2 flex flex-col gap-2 items-center">
-                <svg class="w-16 h-16" fill="currentColor">
+                <svg class="w-16 h-16 laptop:w-8 laptop:h-8" fill="currentColor">
                   <use href="#humidity"></use>
                 </svg>
-                <span class="text-2xl font-semibold">41%</span>
-                <h1 class="font-medium">humidity</h1>
+                <span class="text-2xl font-semibold laptop:text-lg">41%</span>
+                <h1 class="font-medium laptop:text-sm laptop:text-nowrap">humidity</h1>
               </div>
               <div class="w-1/2 flex flex-col gap-2 items-center">
-                <svg class="w-16 h-16" fill="currentColor">
+                <svg class="w-16 h-16 laptop:w-8 laptop:h-8" fill="currentColor">
                   <use href="#wind"></use>
                 </svg>
-                <span class="text-2xl font-semibold">2km/h</span>
-                <h1 class="font-medium">wind Speed</h1>
+                <span class="text-2xl font-semibold laptop:text-lg">2km/h</span>
+                <h1 class="font-medium laptop:text-sm laptop:text-nowrap">wind Speed</h1>
               </div>
             </div>
-            <div class="flex">
+            <div class="flex laptop:pt-2">
               <div class="w-1/2 flex flex-col gap-2 items-center">
-                <svg class="w-16 h-16" fill="transparent">
+                <svg class="w-16 h-16 laptop:w-8 laptop:h-8" fill="transparent">
                   <use href="#pressure"></use>
                 </svg>
-                <span class="text-2xl font-semibold">997hPa</span>
-                <h1 class="font-medium">pressure</h1>
+                <span class="text-2xl font-semibold laptop:text-lg">997hPa</span>
+                <h1 class="font-medium laptop:text-sm laptop:text-nowrap">pressure</h1>
               </div>
               <div class="w-1/2 flex flex-col gap-2 items-center">
-                <svg class="w-16 h-16" fill="currentColor">
+                <svg class="w-16 h-16 laptop:w-8 laptop:h-8" fill="currentColor">
                   <use href="#uv"></use>
                 </svg>
-                <span class="text-2xl font-semibold">8</span>
-                <h1 class="font-medium">UV</h1>
+                <span class="text-2xl font-semibold laptop:text-lg">8</span>
+                <h1 class="font-medium laptop:text-sm laptop:text-nowrap">UV</h1>
               </div>
             </div>
           </div>
@@ -460,10 +460,10 @@
         <h2 class="text-center font-extrabold text-3xl text-sky-50">
           Hourly Forecast
         </h2>
-        <div class="swiper mySwiper hidden mobile:block tablet:block">
+        <div class="swiper mySwiper hidden mobile:block tablet:block laptop:block">
           <!-- Additional required wrapper -->
           <div
-            class="swiper-wrapper hidden mobile:h-fit mobile:flex mobile:justify-evenly mobile:items-center tablet:h-fit tablet:flex tablet:justify-evenly tablet:items-center"
+            class="swiper-wrapper hidden mobile:h-fit mobile:flex mobile:justify-evenly mobile:items-center tablet:h-fit tablet:flex tablet:justify-evenly tablet:items-center laptop:flex laptop:h-fit laptop:justify-evenly laptop:items-center"
           >
             <!-- Slides -->
             <div class="swiper-slide">
@@ -665,7 +665,7 @@
       <div
         class="w-[510px] h-[330px] glassmorphism flex_center overflow-hidden rounded-2xl dark:dark_glassmorphism mobile:w-[370px] tablet:w-[480px]"
       >
-        <p class="p-5 text-slate-100 text-justify hyphens-auto tracking-wider">
+        <p class="p-5 text-slate-100 text-justify hyphens-auto tracking-wide  ">
           This weather webpage is a collaborative effort between
           <a
             href="https://github.com/DanialBakhtiari"
