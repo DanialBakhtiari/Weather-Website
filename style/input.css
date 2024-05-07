@@ -5,13 +5,14 @@
 @layer base {
   body,
   html {
-    @apply h-full;
+    @apply h-dvh;
+
   }
 }
 
 @layer components {
   .cloudy {
-    height: 100%;
+    height: 100dvh;
     background-image: url(../src/images/cloudy.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -32,7 +33,7 @@
     background-size: cover;
   }
   .rainy {
-    height: 100%;
+    height: 100dvh;
     background-image: url(../src/images/rainy.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -82,8 +83,21 @@
     @apply bg-boxLight bg-opacity-40 backdrop-blur-md;
   }
 
+  .dark_glassmorphism {
+    @apply bg-boxDark bg-opacity-40 backdrop-blur-md;
+  }
+
   .glassmorphism2 {
     @apply bg-cyan-700 bg-opacity-60 backdrop-blur-lg;
+  }
+
+  .dark_glassmorphism2 {
+    @apply bg-boxLight bg-opacity-30 backdrop-blur-lg;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
   }
 
 }
