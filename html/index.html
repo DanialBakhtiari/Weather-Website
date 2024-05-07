@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../style/output.css">
 </head>
 
-<body class=" py-[63px] pr-[87px] pl-[80px] rainy">
+<body class=" py-[63px] pr-[87px] pl-[80px] mobile:p-[33px] rainy">
   <!-- ? SVG Sprite -->
   <svg class="hidden">
     <symbol id="currentLocation" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
@@ -39,9 +39,9 @@
       <path
         d="M224 0c17.7 0 32 14.3 32 32V62.1l15-15c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-49 49v70.3l61.4-35.8 17.7-66.1c3.4-12.8 16.6-20.4 29.4-17s20.4 16.6 17 29.4l-5.2 19.3 23.6-13.8c15.3-8.9 34.9-3.7 43.8 11.5s3.8 34.9-11.5 43.8l-25.3 14.8 21.7 5.8c12.8 3.4 20.4 16.6 17 29.4s-16.6 20.4-29.4 17l-67.7-18.1L287.5 256l60.9 35.5 67.7-18.1c12.8-3.4 26 4.2 29.4 17s-4.2 26-17 29.4l-21.7 5.8 25.3 14.8c15.3 8.9 20.4 28.5 11.5 43.8s-28.5 20.4-43.8 11.5l-23.6-13.8 5.2 19.3c3.4 12.8-4.2 26-17 29.4s-26-4.2-29.4-17l-17.7-66.1L256 311.7v70.3l49 49c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-15-15V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V449.9l-15 15c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l49-49V311.7l-61.4 35.8-17.7 66.1c-3.4 12.8-16.6 20.4-29.4 17s-20.4-16.6-17-29.4l5.2-19.3L48.1 395.6c-15.3 8.9-34.9 3.7-43.8-11.5s-3.7-34.9 11.5-43.8l25.3-14.8-21.7-5.8c-12.8-3.4-20.4-16.6-17-29.4s16.6-20.4 29.4-17l67.7 18.1L160.5 256 99.6 220.5 31.9 238.6c-12.8 3.4-26-4.2-29.4-17s4.2-26 17-29.4l21.7-5.8L15.9 171.6C.6 162.7-4.5 143.1 4.4 127.9s28.5-20.4 43.8-11.5l23.6 13.8-5.2-19.3c-3.4-12.8 4.2-26 17-29.4s26 4.2 29.4 17l17.7 66.1L192 200.3V129.9L143 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l15 15V32c0-17.7 14.3-32 32-32z" />
     </symbol>
-    <symbol id="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#fde047">
+    <symbol id="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fde047">
       <path
-        d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+        d="M12,17c-2.76,0-5-2.24-5-5s2.24-5,5-5,5,2.24,5,5-2.24,5-5,5Zm0-8c-1.65,0-3,1.35-3,3s1.35,3,3,3,3-1.35,3-3-1.35-3-3-3Zm1-5V1c0-.55-.45-1-1-1s-1,.45-1,1v3c0,.55,.45,1,1,1s1-.45,1-1Zm0,19v-3c0-.55-.45-1-1-1s-1,.45-1,1v3c0,.55,.45,1,1,1s1-.45,1-1ZM5,12c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1s.45,1,1,1h3c.55,0,1-.45,1-1Zm19,0c0-.55-.45-1-1-1h-3c-.55,0-1,.45-1,1s.45,1,1,1h3c.55,0,1-.45,1-1ZM6.71,6.71c.39-.39,.39-1.02,0-1.41l-2-2c-.39-.39-1.02-.39-1.41,0s-.39,1.02,0,1.41l2,2c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29Zm14,14c.39-.39,.39-1.02,0-1.41l-2-2c-.39-.39-1.02-.39-1.41,0s-.39,1.02,0,1.41l2,2c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29Zm-16,0l2-2c.39-.39,.39-1.02,0-1.41s-1.02-.39-1.41,0l-2,2c-.39,.39-.39,1.02,0,1.41,.2,.2,.45,.29,.71,.29s.51-.1,.71-.29ZM18.71,6.71l2-2c.39-.39,.39-1.02,0-1.41s-1.02-.39-1.41,0l-2,2c-.39,.39-.39,1.02,0,1.41,.2,.2,.45,.29,.71,.29s.51-.1,.71-.29Z" />
     </symbol>
     <symbol id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
       <path
@@ -108,8 +108,7 @@
         <path d="M3.30664 17.3291L5.23849 16.8115" stroke="currentColor" stroke-linecap="round"></path>
       </g>
     </symbol>
-<symbol id="uv" viewBox="0 0 32 32" id="Layer_1" data-name="Layer 1"
-      xmlns="http://www.w3.org/2000/svg">
+    <symbol id="uv" viewBox="0 0 32 32" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
       <g id="SVGRepo_iconCarrier">
@@ -145,24 +144,24 @@
     <div class="">
       <label class="inline-flex items-center cursor-pointer">
         <input type="checkbox" value="" class="sr-only peer">
-        <span class="me-3 text-sm font-medium text-white">Dark</span>
+        <span class="me-3 text-sm font-medium text-white mobile:hidden">Dark</span>
         <div
           class="relative w-11 h-6 bg-black peer-focus:outline-none  rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-yellow-400">
         </div>
-        <span class="ms-3 text-sm font-medium text-white">Light</span>
+        <span class="ms-3 text-sm font-medium text-white mobile:hidden">Light</span>
       </label>
     </div>
     <!-- ? Search Bar-->
     <div class="">
-      <form class="w-[621px] overflow-hidden rounded-full">
+      <form class="w-[621px] overflow-hidden rounded-full mobile:w-[334px]">
         <div class="relative">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3 cursor-pointer">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 cursor-pointer dark:text-searchbar">
             <svg class="w-8 h-8">
               <use href="#search"></use>
             </svg>
           </div>
           <input type="search" id="default-search"
-            class="block w-full p-4 ps-12 text-sm  border rounded-lg bg-searchbar focus-visible:outline-none"
+            class="block w-full p-4 ps-12 text-sm rounded-lg bg-searchbar focus-visible:outline-none dark:bg-boxDark mobile:h-[45px]"
             placeholder="Search for your preferred city...">
         </div>
       </form>
@@ -170,17 +169,17 @@
     <!-- ? Current Location btn-->
     <div class="">
       <button type="button"
-        class="text-white bg-green-500 hover:bg-green-600 focus:outline-none rounded-full text-xl font-bold px-3 py-[13px] me-2 flex items-center">
+        class="text-white bg-green-500 hover:bg-green-600 focus:outline-none rounded-full text-xl font-bold px-3 py-[13px] me-2 flex items-center dark:bg-boxDark dark:text-green-500 mobile:w-[85px] mobile:h-[45px] mobile:flex_center">
         <svg class="w-7 h-7">
           <use href="#currentLocation"></use>
         </svg>
-        Current Location
+        <span class="mobile:hidden">Current Location</span>
       </button>
     </div>
   </section>
-  <section class="w-full h-auto flex_center mt-12 gap-[55px]">
+  <section class="w-full h-auto flex_center mt-12 gap-[55px] mobile:flex-col">
     <div class="w-[510px] h-[330px] rounded-2xl">
-      <div class="w-full h-full glassmorphism rounded-2xl flex_center">
+      <div class="w-full h-full glassmorphism rounded-2xl flex_center dark:dark_glassmorphism">
         <div class="w-fit h-auto flex_center flex-col space-y-8">
           <h1 class="text-4xl text-white font-bold">Toronto</h1>
           <time class="text-6xl mx-auto font-extrabold text-white ">19:55</time>
@@ -188,69 +187,140 @@
         </div>
       </div>
     </div>
-    <div class="w-[780px] h-[330px]  rounded-2xl">
-      <div class="w-full h-full glassmorphism rounded-2xl flex items-center justify-center">
-        <div class=" w-1/3 h-auto flex-center flex-col space-y-8 px-6 pb-6 pt-4 text-white">
+    <div class="w-[780px] h-[330px]  rounded-2xl mobile:w-[510px] mobile:h-[600px] ">
+      <div class="w-full h-full glassmorphism rounded-2xl flex_center dark:dark_glassmorphism mobile:flex-wrap ">
+        <div class=" w-1/3 h-auto flex-center flex-col space-y-8 px-6 pb-6 pt-4 text-white mobile:w-1/2 mobile:pb-4">
           <span class="w-full block text-6xl mx-auto font-extrabold ">75°C</span>
           <span class="text-xl font-semibold ">Feels like:</span> <span class="text-2xl ">22°C</span>
           <div class="">
             <span class="text-xl font-bold w-full block">Sunrise</span>
             <span class="font-semibold">06:37 AM</span>
           </div>
-          
-            <span class="text-xl font-bold w-full block">Sunset</span>
-            <span class="font-semibold">20:37 AM</span>
-          
+          <span class="text-xl font-bold w-full block">Sunset</span>
+          <span class="font-semibold">20:37 AM</span>
         </div>
-        <div class="w-1/3 h-full flex flex-col items-center justify-center gap-6 pb-9 text-white">
+        <div class="w-1/3 h-fit flex flex-col items-center justify-center gap-6 pb-9 text-white mobile:w-1/2 ">
           <svg class="block w-[180px] mx-auto ">
             <use href="#sun" fill="#F6B17A"></use>
           </svg>
           <h1 class="text-3xl font-bold block text-center">Sunny</h1>
         </div>
-        <div class="w-1/3 h-full flex flex-col text-white">
-          <div class="w-100 flex pt-6">
+        <div class="w-1/3 h-fit flex flex-col text-white mobile:w-full mobile:pb-3">
+          <div class="flex pt-6">
             <div class="w-1/2  flex flex-col gap-2 items-center ">
-            <svg class="w-16 h-16" fill="currentColor">
-              <use href="#humidity"></use>
-            </svg>
-            <span class="text-2xl font-semibold">41%</span>
-            <h1 class="font-medium">humidity</h1>
+              <svg class="w-16 h-16" fill="currentColor">
+                <use href="#humidity"></use>
+              </svg>
+              <span class="text-2xl font-semibold">41%</span>
+              <h1 class="font-medium">humidity</h1>
+            </div>
+            <div class="w-1/2  flex flex-col gap-2 items-center">
+              <svg class="w-16 h-16" fill="currentColor">
+                <use href="#wind"></use>
+              </svg>
+              <span class="text-2xl font-semibold">2km/h</span>
+              <h1 class="font-medium">wind Speed</h1>
+            </div>
           </div>
-          <div class="w-1/2  flex flex-col gap-2 items-center">
-            <svg class="w-16 h-16" fill="currentColor">
-              <use href="#wind"></use>
-            </svg>
-            <span class="text-2xl font-semibold">2km/h</span>
-            <h1 class="font-medium">wind Speed</h1>
+          <div class="flex ">
+            <div class="w-1/2  flex flex-col gap-2 items-center">
+              <svg class="w-16 h-16" fill="transparent">
+                <use href="#pressure"></use>
+              </svg>
+              <span class="text-2xl font-semibold">997hPa</span>
+              <h1 class="font-medium">pressure</h1>
+            </div>
+            <div class="w-1/2  flex flex-col gap-2  items-center">
+              <svg class="w-16 h-16" fill="currentColor">
+                <use href="#uv"></use>
+              </svg>
+              <span class="text-2xl font-semibold">8</span>
+              <h1 class="font-medium">UV</h1>
+            </div>
           </div>
-        </div>
-        <div class="w-100 flex ">
-          <div class="w-1/2  flex flex-col gap-2 items-center">
-          <svg class="w-16 h-16" fill="transparent">
-            <use href="#pressure"></use>
-          </svg>
-          <span class="text-2xl font-semibold">997hPa</span>
-          <h1 class="font-medium">pressure</h1>
-        </div>
-        <div class="w-1/2  flex flex-col gap-2  items-center">
-          <svg class="w-16 h-16" fill="currentColor">
-            <use href="#uv"></use>
-          </svg>
-          <span class="text-2xl font-semibold">8</span>
-          <h1 class="font-medium">UV</h1>
-        </div>
-      </div>
         </div>
       </div>
     </div>
   </section>
-    <section class="w-full h-auto flex_center mt-12 gap-[55px]">
+  <section class="w-full h-auto flex_center mt-12 gap-[55px] mobile:flex-col">
     <!-- ? Hourly Forecast -->
-    <div class="w-[780px] h-[330px] glassmorphism space-y-7 rounded-2xl text-white">
-      <h2 class="text-center font-extrabold text-3xl text-sky-50">Hourly Forecast:</h2>
-      <div class="h-fit flex justify-evenly items-center">
-        <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl">
+    <div
+      class="w-[780px] h-[330px] glassmorphism overflow-hidden space-y-7 rounded-2xl text-white dark:dark_glassmorphism mobile:w-[510px]">
+      <h2 class="text-center font-extrabold text-3xl text-sky-50">Hourly Forecast</h2>
+      <div class="swiper mySwiper hidden mobile:block">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper hidden mobile:h-fit mobile:flex mobile:justify-evenly mobile:items-center">
+          <!-- Slides -->
+          <div class="swiper-slide ">
+            <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
+              <time datetime="" class="">12:00</time> <!--todo Hour-->
+              <svg class="w-12 h-12"> <!--todo Weather Icon-->
+                <use href="#sun"></use>
+              </svg>
+              <span>21&degC</span> <!--todo Temperature-->
+              <svg class="w-14 h-14" fill="#e0f2fe"> <!--todo Wind icon-->
+                <use href="#wind"></use>
+              </svg>
+              <span>3km/h</span> <!--todo Wind Speed-->
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
+              <time datetime="" class="">01:00</time> <!--todo Hour-->
+              <svg class="w-12 h-12"> <!--todo Weather Icon-->
+                <use href="#rain"></use>
+              </svg>
+              <span>18&degC</span> <!--todo Temperature-->
+              <svg class="w-14 h-14" fill="#e0f2fe"> <!--todo Wind icon-->
+                <use href="#wind"></use>
+              </svg>
+              <span>5km/h</span> <!--todo Wind Speed-->
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
+              <time datetime="" class="">02:00</time> <!--todo Hour-->
+              <svg class="w-12 h-12"> <!--todo Weather Icon-->
+                <use href="#snowy"></use>
+              </svg>
+              <span>1&degC</span> <!--todo Temperature-->
+              <svg class="w-14 h-14" fill="#e0f2fe"> <!--todo Wind icon-->
+                <use href="#wind"></use>
+              </svg>
+              <span>2km/h</span> <!--todo Wind Speed-->
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
+              <time datetime="" class="">03:00</time> <!--todo Hour-->
+              <svg class="w-12 h-12"> <!--todo Weather Icon-->
+                <use href="#cloud"></use>
+              </svg>
+              <span>14&degC</span> <!--todo Temperature-->
+              <svg class="w-14 h-14" fill="#e0f2fe"> <!--todo Wind icon-->
+                <use href="#wind"></use>
+              </svg>
+              <span>10km/h</span> <!--todo Wind Speed-->
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
+              <time datetime="" class="">04:00</time> <!--todo Hour-->
+              <svg class="w-12 h-12"> <!--todo Weather Icon-->
+                <use href="#cloud_sun_rain"></use>
+              </svg>
+              <span>11&degC</span> <!--todo Temperature-->
+              <svg class="w-14 h-14" fill="#e0f2fe"> <!--todo Wind icon-->
+                <use href="#wind"></use>
+              </svg>
+              <span>1km/h</span> <!--todo Wind Speed-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-fit flex justify-evenly items-center mobile:hidden">
+        <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
           <time datetime="" class="">12:00</time> <!--todo Hour-->
           <svg class="w-12 h-12"> <!--todo Weather Icon-->
             <use href="#sun"></use>
@@ -261,7 +331,7 @@
           </svg>
           <span>3km/h</span> <!--todo Wind Speed-->
         </div>
-        <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl">
+        <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
           <time datetime="" class="">01:00</time> <!--todo Hour-->
           <svg class="w-12 h-12"> <!--todo Weather Icon-->
             <use href="#rain"></use>
@@ -272,7 +342,7 @@
           </svg>
           <span>5km/h</span> <!--todo Wind Speed-->
         </div>
-        <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl">
+        <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
           <time datetime="" class="">02:00</time> <!--todo Hour-->
           <svg class="w-12 h-12"> <!--todo Weather Icon-->
             <use href="#snowy"></use>
@@ -283,7 +353,7 @@
           </svg>
           <span>2km/h</span> <!--todo Wind Speed-->
         </div>
-        <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl">
+        <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
           <time datetime="" class="">03:00</time> <!--todo Hour-->
           <svg class="w-12 h-12"> <!--todo Weather Icon-->
             <use href="#cloud"></use>
@@ -294,7 +364,7 @@
           </svg>
           <span>10km/h</span> <!--todo Wind Speed-->
         </div>
-        <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl">
+        <div class=" flex_center flex-col space-y-2 p-5 glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
           <time datetime="" class="">04:00</time> <!--todo Hour-->
           <svg class="w-12 h-12"> <!--todo Weather Icon-->
             <use href="#cloud_sun_rain"></use>
@@ -306,20 +376,23 @@
           <span>1km/h</span> <!--todo Wind Speed-->
         </div>
       </div>
+
     </div>
-    <div class="w-[510px] h-[330px] glassmorphism flex_center overflow-hidden rounded-2xl">
+    <div class="w-[510px] h-[330px] glassmorphism flex_center overflow-hidden rounded-2xl dark:dark_glassmorphism">
       <p class="p-5 text-slate-100 text-justify hyphens-auto tracking-wider">
         This weather webpage is a collaborative effort between <a href="https://github.com/DanialBakhtiari"
           target="_blank" class="text-sky-300">Danial Bakhtiari</a> and <a href="https://github.com/Mani0185"
           target="_blank" class="text-sky-300">Mani Salahshoor</a>. We built it using HTML for structure, CSS for
         styling, and vanilla JavaScript for interactivity. Tailwind CSS provided a helpful toolkit for rapid
-        development, while Tomorrow.io's API delivers the accurate weather data you see. We leverage Git for version
+        development, while <a href="https://www.tomorrow.io/" target="_blank" class="text-sky-300">Tomorrow.io</a>'s API
+        delivers the accurate weather data you see. We leverage Git for version
         control and utilize GitHub to host and collaborate on the code. We're constantly striving to improve, so feel
         free to reach out with any feedback or suggestions!
       </p>
     </div>
   </section>
-
+  <script src="../js/swiper-bundle.min.js"></script>
+  <script src="../js/swiper.js"></script>
   <script type="module" src="../js/script.js"></script>
 </body>
 
