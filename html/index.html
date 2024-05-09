@@ -60,7 +60,7 @@
       <path
         d="M0 32V45.6C0 62.7 1.7 79.6 5 96H357.8c3.2-6.9 7.5-13.3 13-18.8l38.6-38.6c4.2-4.2 6.6-10 6.6-16C416 10.1 405.9 0 393.4 0H32C14.3 0 0 14.3 0 32zm352.2 96H13.6c12.2 35.9 32.3 68.7 58.8 96H412l-47.2-62.9c-7.3-9.7-11.6-21.2-12.6-33.1zm-226 138.2l116.4 68.5c8.2 4.8 15.8 10.7 22.5 17.3H445c2-9.8 3-19.9 3-30.1c0-23-5.3-45.5-15.3-65.9H110.2c5.2 3.6 10.5 7 16 10.2zM288 384c10.3 21.4 13.8 45.5 9.9 69l-5.9 35.7c-2 12.2 7.4 23.4 19.8 23.4c5.3 0 10.4-2.1 14.2-5.9l78.2-78.2c12.8-12.8 23.1-27.7 30.4-43.9H288z" />
     </symbol>
-    <symbol id="cloud_sun_rain" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="#0369a1">
+    <symbol id="cloud_sun_rain" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="#b3d2e2">
       <path
         d="M294.2 1.2c5.1 2.1 8.7 6.7 9.6 12.1l10.4 62.4c-23.3 10.8-42.9 28.4-56 50.3c-14.6-9-31.8-14.1-50.2-14.1c-53 0-96 43-96 96c0 35.5 19.3 66.6 48 83.2c.8 31.8 13.2 60.7 33.1 82.7l-56 39.2c-4.5 3.2-10.3 3.8-15.4 1.6s-8.7-6.7-9.6-12.1L98.1 317.9 13.4 303.8c-5.4-.9-10-4.5-12.1-9.6s-1.5-10.9 1.6-15.4L52.5 208 2.9 137.2c-3.2-4.5-3.8-10.3-1.6-15.4s6.7-8.7 12.1-9.6L98.1 98.1l14.1-84.7c.9-5.4 4.5-10 9.6-12.1s10.9-1.5 15.4 1.6L208 52.5 278.8 2.9c4.5-3.2 10.3-3.8 15.4-1.6zM208 144c13.8 0 26.7 4.4 37.1 11.9c-1.2 4.1-2.2 8.3-3 12.6c-37.9 14.6-67.2 46.6-77.8 86.4C151.8 243.1 144 226.5 144 208c0-35.3 28.7-64 64-64zm69.4 276c11 7.4 14 22.3 6.7 33.3l-32 48c-7.4 11-22.3 14-33.3 6.7s-14-22.3-6.7-33.3l32-48c7.4-11 22.3-14 33.3-6.7zm96 0c11 7.4 14 22.3 6.7 33.3l-32 48c-7.4 11-22.3 14-33.3 6.7s-14-22.3-6.7-33.3l32-48c7.4-11 22.3-14 33.3-6.7zm96 0c11 7.4 14 22.3 6.7 33.3l-32 48c-7.4 11-22.3 14-33.3 6.7s-14-22.3-6.7-33.3l32-48c7.4-11 22.3-14 33.3-6.7zm96 0c11 7.4 14 22.3 6.7 33.3l-32 48c-7.4 11-22.3 14-33.3 6.7s-14-22.3-6.7-33.3l32-48c7.4-11 22.3-14 33.3-6.7zm74.5-116.1c0 44.2-35.8 80-80 80H288c-53 0-96-43-96-96c0-47.6 34.6-87 80-94.6l0-1.3c0-53 43-96 96-96c34.9 0 65.4 18.6 82.2 46.4c13-9.1 28.8-14.4 45.8-14.4c44.2 0 80 35.8 80 80c0 5.9-.6 11.7-1.9 17.2c37.4 6.7 65.8 39.4 65.8 78.7z" />
     </symbol>
@@ -141,10 +141,13 @@
     <div class="mobile:mr-1 tablet:mr-2">
       <label class="inline-flex items-center cursor-pointer">
         <input type="checkbox" value="" class="sr-only peer">
-        <span class="me-3 text-sm font-medium  text-white mobile:hidden laptop:me-2 laptop:text-xs">Light</span>
-        <div onclick="ToggleDarkLight()" class="relative w-11 h-6 bg-yellow-400 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-black">
+        <span onclick="ToggleDarkLight()"
+          class="me-3 text-sm font-medium  text-white mobile:hidden laptop:me-2 laptop:text-xs">Light</span>
+        <div onclick="ToggleDarkLight()"
+          class="relative w-11 h-6 bg-yellow-400 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-black">
         </div>
-        <span class="ms-3 text-sm font-medium  text-white mobile:hidden laptop:ms-2 laptop:text-xs">Dark</span>
+        <span onclick="ToggleDarkLight()"
+          class="ms-3 text-sm font-medium  text-white mobile:hidden laptop:ms-2 laptop:text-xs">Dark</span>
       </label>
     </div>
     <!-- ? Search Bar-->
@@ -152,13 +155,14 @@
       <form
         class="w-[621px] overflow-hidden rounded-full mobile:w-[218px] mobile:mr-1 tablet:w-[230px] tablet:mr-2 laptop:mr-1 laptop:max-w-[410px]">
         <div class="relative">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3 cursor-pointer dark:text-searchbar">
+          <div id="searchIcon"
+            class="absolute inset-y-0 start-0 flex items-center ps-3 cursor-pointer dark:text-searchbar">
             <svg class="w-8 h-8">
               <use href="#search"></use>
             </svg>
           </div>
-          <input type="search" id="default-search"
-            class="block w-full p-4 ps-12 text-sm rounded-lg bg-searchbar focus-visible:outline-none dark:bg-boxDark mobile:h-[45px] "
+          <input type="text" id="default-search"
+            class=" block w-full p-4 ps-12 text-sm rounded-lg bg-searchbar focus-visible:outline-none dark:bg-boxDark dark:text-searchbar mobile:h-[45px] "
             placeholder="Search for your preferred city..." />
         </div>
       </form>
@@ -178,10 +182,10 @@
   <section class="w-full h-auto flex_center mt-12 gap-[55px] mobile:flex-col tablet:flex-col">
     <div class="w-[510px] h-[330px]  rounded-2xl mobile:w-[370px] tablet:w-[480px] tablet:h-[300px]">
       <div class="w-full h-full glassmorphism rounded-2xl flex_center dark:dark_glassmorphism">
-        <div class="w-fit h-auto  flex_center flex-col space-y-8">
-          <h1 class="text-4xl text-white font-bold">Toronto</h1>
-          <time class="text-6xl mx-auto font-extrabold text-white">19:55</time>
-          <span class="text-lg font-extralight text-white">Monday, 30 Aug</span>
+        <div class="w-fit h-auto  flex_center flex-col space-y-8 text-textLight dark:text-textDark">
+          <h1 class="text-4xl  font-bold">Toronto</h1>
+          <time class="text-6xl mx-auto font-extrabold ">19:55</time>
+          <span class="text-lg font-extralight ">Monday, 30 Aug</span>
         </div>
       </div>
     </div>
@@ -189,7 +193,7 @@
       <div
         class="w-full h-full glassmorphism rounded-2xl flex_center dark:dark_glassmorphism mobile:flex-wrap tablet:flex-wrap">
         <div
-          class="w-1/3 h-auto flex-center flex-col space-y-8 px-6 pb-6 pt-4 text-white mobile:w-1/2 mobile:pb-4 tablet:w-1/2 tablet:pb-4 laptop:px-4">
+          class="w-1/3 h-auto flex-center flex-col space-y-8 px-6 pb-6 pt-4 text-textLight dark:text-textDark mobile:w-1/2 mobile:pb-4 tablet:w-1/2 tablet:pb-4 laptop:px-4">
           <span class="w-full block text-6xl mx-auto font-extrabold">75°C</span>
           <span class="text-xl font-semibold">Feels like:</span>
           <span class="text-2xl">22°C</span>
@@ -201,13 +205,14 @@
           <span class="font-semibold">20:37 AM</span>
         </div>
         <div
-          class="w-1/3 h-fit flex flex-col items-center justify-center gap-6 pb-9 text-white mobile:w-1/2 tablet:w-1/2">
+          class="w-1/3 h-fit flex flex-col items-center justify-center gap-6 pb-9 text-textLight dark:text-textDark mobile:w-1/2 tablet:w-1/2">
           <svg class="block w-[180px] mx-auto laptop:w-[130px]">
             <use href="#sun" fill="#F6B17A"></use>
           </svg>
           <h1 class="text-3xl font-bold block text-center">Sunny</h1>
         </div>
-        <div class="w-1/3 h-fit flex flex-col text-white mobile:w-full mobile:pb-3 tablet:w-full tablet:pb-3">
+        <div
+          class="w-1/3 h-fit flex flex-col text-textLight dark:text-textDark mobile:w-full mobile:pb-3 tablet:w-full tablet:pb-3">
           <div class="flex pt-6 laptop:pt-0">
             <div class="w-1/2 flex flex-col gap-2 items-center">
               <svg class="w-16 h-16 laptop:w-8 laptop:h-8" fill="currentColor">
@@ -247,8 +252,8 @@
   <section class="w-full h-auto flex_center mt-12 gap-[55px] mobile:flex-col tablet:flex-col laptop:flex-wrap">
     <!-- ? Hourly Forecast -->
     <div
-      class="w-[780px] h-[330px] glassmorphism overflow-hidden space-y-7 rounded-2xl text-white dark:dark_glassmorphism mobile:w-[370px] tablet:w-[480px] laptop:w-full">
-      <h2 class="text-center font-extrabold text-3xl text-sky-50">
+      class="w-[780px] h-[330px] glassmorphism overflow-hidden space-y-7 rounded-2xl text-textLight dark:text-textDark dark:dark_glassmorphism mobile:w-[370px] tablet:w-[480px] laptop:w-full">
+      <h2 class="text-center font-extrabold text-3xl">
         Hourly Forecast
       </h2>
       <div class="swiper mySwiper hidden mobile:block tablet:block laptop:block">
@@ -434,7 +439,7 @@
     </div>
     <div
       class="w-[510px] h-[330px] glassmorphism flex_center overflow-hidden rounded-2xl dark:dark_glassmorphism mobile:w-[370px] tablet:w-[480px] laptop:w-full laptop:h-fit">
-      <p class="p-5 text-slate-100 text-justify hyphens-auto tracking-wide  ">
+      <p class="p-5 text-textLight dark:text-textDark text-justify hyphens-auto tracking-wide  ">
         This weather webpage is a collaborative effort between
         <a href="https://github.com/DanialBakhtiari" target="_blank" class="text-sky-300">Danial Bakhtiari</a>
         and

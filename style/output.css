@@ -883,24 +883,19 @@ body,
   border-radius: 0.5rem;
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
-.bg-searchbar {
-  --tw-bg-opacity: 1;
-  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
-}
-
 .bg-lightBG {
   --tw-bg-opacity: 1;
   background-color: rgb(82 109 130 / var(--tw-bg-opacity));
+}
+
+.bg-searchbar {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
 }
 
 .bg-yellow-400 {
@@ -1050,6 +1045,11 @@ body,
   color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
+.text-textLight {
+  --tw-text-opacity: 1;
+  color: rgb(32 43 52 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1184,11 +1184,6 @@ body,
   outline-offset: 2px;
 }
 
-.peer:checked ~ .peer-checked\:bg-yellow-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
-}
-
 .peer:checked ~ .peer-checked\:bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1229,6 +1224,11 @@ body,
 .dark\:text-searchbar:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(217 217 217 / var(--tw-text-opacity));
+}
+
+.dark\:text-textDark:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(232 233 234 / var(--tw-text-opacity));
 }
 
 .dark\:hover\:bg-green-900:hover:is(.dark *) {
