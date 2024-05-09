@@ -6,7 +6,6 @@
   body,
   html {
     @apply h-dvh;
-
   }
 }
 
@@ -31,6 +30,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
   }
   .rainy {
     height: 100dvh;
