@@ -569,38 +569,6 @@ body,
   }
 }
 
-.cloudy {
-  height: 100dvh;
-  background-image: url(../src/images/bg_conditions/cloudy.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.lightning {
-  height: 100%;
-  background-image: url(../src/images/bg_conditions/lightning.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.rainy {
-  height: 100dvh;
-  background-image: url(../src/images/bg_conditions/rainy.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.snowy {
-  height: 100%;
-  background-image: url(../src/images/bg_conditions/snow.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .storm {
   height: 100%;
   background-image: url(../src/images/bg_conditions/storm.jpg);
