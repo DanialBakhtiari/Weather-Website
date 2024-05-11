@@ -569,9 +569,9 @@ body,
   }
 }
 
-.rainy {
-  height: 100dvh;
-  background-image: url(../src/images/rainy.jpg);
+.lightning {
+  height: 100%;
+  background-image: url(../src/images/lightning.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -883,11 +883,6 @@ body,
   border-radius: 0.5rem;
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
@@ -896,6 +891,11 @@ body,
 .bg-searchbar {
   --tw-bg-opacity: 1;
   background-color: rgb(217 217 217 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
 .p-4 {
@@ -1030,16 +1030,6 @@ body,
   color: rgb(125 211 252 / var(--tw-text-opacity));
 }
 
-.text-sky-50 {
-  --tw-text-opacity: 1;
-  color: rgb(240 249 255 / var(--tw-text-opacity));
-}
-
-.text-slate-100 {
-  --tw-text-opacity: 1;
-  color: rgb(241 245 249 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1169,19 +1159,14 @@ body,
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
 .focus-visible\:outline-none:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
-.peer:checked ~ .peer-checked\:bg-yellow-400 {
+.peer:checked ~ .peer-checked\:bg-black {
   --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .peer:checked ~ .peer-checked\:after\:translate-x-full::after {
@@ -1214,6 +1199,11 @@ body,
 .dark\:text-searchbar:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(217 217 217 / var(--tw-text-opacity));
+}
+
+.dark\:hover\:bg-green-900:hover:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 83 45 / var(--tw-bg-opacity));
 }
 
 @media (max-width: 576px) {
@@ -1428,8 +1418,16 @@ body,
     width: 130px;
   }
 
+  .laptop\:w-full {
+    width: 100%;
+  }
+
   .laptop\:max-w-\[410px\] {
     max-width: 410px;
+  }
+
+  .laptop\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .laptop\:items-center {
