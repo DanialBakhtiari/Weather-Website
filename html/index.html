@@ -10,7 +10,7 @@
 </head>
 
 <body
-  class="py-[63px] pr-[87px] pl-[80px] bg-lightBG dark:bg-darkBg mobile:p-[33px] tablet:p-[33px] laptop:p-[65px] storm">
+  class="py-[63px] pr-[87px] pl-[80px] bg-lightBG dark:bg-darkBg mobile:p-[25px] tablet:p-[33px] laptop:p-[65px] storm">
   <!-- ? SVG Sprite -->
   <svg class="hidden">
     <symbol id="currentLocation" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
@@ -394,7 +394,40 @@
       </div>
     </div>
     <div
-      class="w-[510px] h-[330px] glassmorphism flex_center overflow-hidden rounded-2xl dark:dark_glassmorphism mobile:w-[370px] tablet:w-[480px] laptop:w-full laptop:h-fit">
+      class="w-[510px] h-[330px] glassmorphism flex-col flex_center overflow-hidden rounded-2xl dark:dark_glassmorphism mobile:w-[370px] tablet:w-[480px] laptop:w-full laptop:h-fit p-5">
+      <div class="w-full ">
+        <div class="w-full"><p class=" text-center font-bold text-3xl">5 Days Forcasts</p></div>
+        <div class=" flex items-center justify-evenly  ">
+          <img id="imgDays1" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
+          <span class="font-bold text-2xl" id="TempDays1">22°C</span>
+          <span class="font-bold text-2xl" id="dateDays1">Friday, 1 Sep</span>
+        </div>
+        <div class=" flex items-center justify-evenly  ">
+          <img id="imgDays2" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
+          <span class="font-bold text-2xl" id="TempDays2">22°C</span>
+          <span class="font-bold text-2xl" id="dateDays2">Friday, 1 Sep</span>
+        </div>
+        <div class=" flex items-center justify-evenly  ">
+          <img id="imgDays3" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
+          <span class="font-bold text-2xl" id="TempDays3">22°C</span>
+          <span class="font-bold text-2xl" id="dateDays3">Friday, 1 Sep</span>
+        </div>
+        <div class=" flex items-center justify-evenly  ">
+          <img id="imgDays4" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
+          <span class="font-bold text-2xl" id="TempDays4">22°C</span>
+          <span class="font-bold text-2xl" id="dateDays4">Friday, 1 Sep</span>
+        </div>
+        <div class=" flex items-center justify-evenly  ">
+          <img id="imgDays5" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
+          <span class="font-bold text-2xl" id="TempDays5">22°C</span>
+          <span class="font-bold text-2xl" id="dateDays5">Friday, 1 Sep</span>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <section class="w-full h-auto flex_center glassmorphism flex-col overflow-hidden mt-12   laptop:flex-wrap rounded-2xl mobile:w-full tablet:w-[480px] dark:dark_glassmorphism laptop:w-full tablet:p-0">
+    <div>
       <p class="p-5 text-textLight dark:text-textDark text-justify hyphens-auto tracking-wide  ">
         This weather webpage is a collaborative effort between
         <a href="https://github.com/DanialBakhtiari" target="_blank" class="text-sky-300">Danial Bakhtiari</a>
@@ -409,6 +442,11 @@
         code. We're constantly striving to improve, so feel free to reach out
         with any feedback or suggestions!
       </p>
+    </div>
+    <div class="w-full ">
+      <div class="w-auto h-auto flex flex-row-reverse ">
+        <a target="_blank" href="https://www.tomorrow.io/"><img class="w-60  pb-1" src="../src/images/TomorrowIcon/Powered_by_Tomorrow-White.png" alt="TomorrowIcon"></a>
+      </div>
     </div>
   </section>
   <script src="../js/swiper-bundle.min.js"></script>
