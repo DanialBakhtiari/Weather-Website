@@ -97,13 +97,13 @@
     <div class="mobile:mr-1 tablet:mr-2">
       <label class="inline-flex items-center cursor-pointer">
         <input type="checkbox" value="" class="sr-only peer">
-        <span onclick="ToggleDarkLight()"
-          class="me-3 text-sm font-medium  text-white mobile:hidden laptop:me-2 laptop:text-xs">Light</span>
-        <div onclick="ToggleDarkLight()"
-          class="relative w-11 h-6 bg-yellow-400 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-black">
+        <span 
+          class="dark_mode_toggle me-3 text-sm font-medium  text-white mobile:hidden laptop:me-2 laptop:text-xs">Light</span>
+        <div 
+          class="dark_mode_toggle relative w-11 h-6 bg-yellow-400 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-black">
         </div>
-        <span onclick="ToggleDarkLight()"
-          class="ms-3 text-sm font-medium  text-white mobile:hidden laptop:ms-2 laptop:text-xs">Dark</span>
+        <span 
+          class="dark_mode_toggle ms-3 text-sm font-medium  text-white mobile:hidden laptop:ms-2 laptop:text-xs">Dark</span>
       </label>
     </div>
     <!-- ? Search Bar-->
@@ -413,8 +413,9 @@
   </section>
   <script src="../js/swiper-bundle.min.js"></script>
   <script src="../js/swiper.js"></script>
-  <script src="../js/script.js"></script>
   <script type="module" src="/js/element.js"></script>
+  <script type="module" src="../js/fetch.js"></script>
+  <script type="module" src="../js/script.js"></script>
 </body>
 
 </html>
