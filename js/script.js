@@ -1,56 +1,29 @@
-import {currentLoc,cityelem,cityTime,cityDate,temperature,feelsLike,sunrise,sunrset,description,humidity,windSpeed,pressureElem,UV} from "elemnt.js"
-const html = document.querySelector("html");
-const searchbar = document.getElementById("default-search");
-const searchIcon = document.getElementById("searchIcon");
-const temperature = document.getElementById("temperature")
-
-searchIcon.addEventListener("click", () => {
-  const APIendPoint = `https://api.tomorrow.io/v4/weather/realtime?location=${searchbar.value}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
-  const APIendPointForecast = `https://api.tomorrow.io/v4/weather/forecast?location=${searchbar.value}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
-
-
-  const options = { method: "GET", headers: { accept: "application/json" } };
-
-  fetch(APIendPoint, options)
-    .then((response) => response.json())
-    .then((realTime) => console.log(realTime))
-    .catch((err) => console.error(err));
-
-  fetch(APIendPointForecast, options)
-    .then(response => response.json())
-    .then(forecast => console.log(forecast))
-    .catch(err => console.error(err));
-
-  searchbar.value = "";
-});
-
-searchbar.addEventListener("keypress", (event) => {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    const APIendPoint = `https://api.tomorrow.io/v4/weather/realtime?location=${searchbar.value}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
-    const APIendPointForecast = `https://api.tomorrow.io/v4/weather/forecast?location=${searchbar.value}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
+import {
+  currentLoc,
+  cityelem,
+  cityTime,
+  cityDate,
+  temperature,
+  feelsLike,
+  sunrise,
+  sunrset,
+  description,
+  humidity,
+  windSpeed,
+  pressureElem,
+  UV,
+  html,
+  searchbar,
+  searchIcon,
+  dark_mode_toggle,
+} from "./element.js";
 
 
-    const options = { method: "GET", headers: { accept: "application/json" } };
 
-    fetch(APIendPoint, options)
-      .then((response) => response.json())
-      .then((realTime) => console.log(realTime))
-      .catch((err) => console.error(err));
-
-    fetch(APIendPointForecast, options)
-      .then(response => response.json())
-      .then(forecast => console.log(forecast))
-      .catch(err => console.error(err));
-
-
-    searchbar.value = "";
+try {
+  for (const key in dark_mode_toggle) {
+    dark_mode_toggle[key].addEventListener("click", () => {
+      html.classList.toggle("dark");
+    });
   }
-});
-
-
-
-
-function ToggleDarkLight() {
-  html.classList.toggle("dark");
-}
+} catch (error) {}
