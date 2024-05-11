@@ -569,17 +569,9 @@ body,
   }
 }
 
-.lightning {
+.storm {
   height: 100%;
-  background-image: url(../src/images/lightning.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.snowy {
-  height: 100%;
-  background-image: url(../src/images/snow.jpg);
+  background-image: url(../src/images/bg_conditions/storm.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -765,10 +757,6 @@ body,
 
 .w-8 {
   width: 2rem;
-}
-
-.w-\[180px\] {
-  width: 180px;
 }
 
 .w-\[510px\] {
@@ -1412,10 +1400,6 @@ body,
 
   .laptop\:w-8 {
     width: 2rem;
-  }
-
-  .laptop\:w-\[130px\] {
-    width: 130px;
   }
 
   .laptop\:w-full {
