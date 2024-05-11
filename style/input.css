@@ -12,21 +12,21 @@
 @layer components {
   .cloudy {
     height: 100dvh;
-    background-image: url(../src/images/cloudy.jpg);
+    background-image: url(../src/images/bg_conditions/cloudy.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .fogy {
     height: 100%;
-    background-image: url(../src/images/fogy.jpg);
+    background-image: url(../src/images/bg_conditions/fogy.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .lightning {
     height: 100%;
-    background-image: url(../src/images/lightning.jpg);
+    background-image: url(../src/images/bg_conditions/lightning.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,42 +34,42 @@
   }
   .rainy {
     height: 100dvh;
-    background-image: url(../src/images/rainy.jpg);
+    background-image: url(../src/images/bg_conditions/rainy.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .snowy {
     height: 100%;
-    background-image: url(../src/images/snow.jpg);
+    background-image: url(../src/images/bg_conditions/snow.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .storm {
     height: 100%;
-    background-image: url(../src/images/storm.jpg);
+    background-image: url(../src/images/bg_conditions/storm.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .sun_wind {
     height: 100%;
-    background-image: url(../src/images/sun-wind.jpg);
+    background-image: url(../src/images/bg_conditions/sun-wind.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .sunny {
     height: 100%;
-    background-image: url(../src/images/suny.jpg);
+    background-image: url(../src/images/bg_conditions/sunny.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .windy {
     height: 100%;
-    background-image: url(../src/images/windy.jpg);
+    background-image: url(../src/images/bg_conditions/windy.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
