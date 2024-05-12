@@ -9,19 +9,54 @@ import {
   dateDaysThree,
   dateDaysTwo,
   feelsLike,
+  hourFive,
+  hourFour,
+  hourOne,
+  hourThree,
+  hourTwo,
   humidityElem,
+  imgHourFive,
+  imgHourFour,
+  imgHourOne,
+  imgHourThree,
+  imgHourTwo,
   pressureElem,
   searchIcon,
   searchbar,
   sunRise,
   sunSet,
+  swiperHourFive,
+  swiperHourFour,
+  swiperHourOne,
+  swiperHourThree,
+  swiperHourTwo,
+  swiperTempHourFive,
+  swiperTempHourFour,
+  swiperTempHourOne,
+  swiperTempHourThree,
+  swiperTempHourTwo,
+  swiperWindHourFive,
+  swiperWindHourFour,
+  swiperWindHourOne,
+  swiperWindHourThree,
+  swiperWindHourTwo,
   tempDaysFive,
   tempDaysFour,
   tempDaysOne,
   tempDaysThree,
   tempDaysTwo,
+  tempHourFive,
+  tempHourFour,
+  tempHourOne,
+  tempHourThree,
+  tempHourTwo,
   temperature,
   weatherCodeIcon,
+  windHourFive,
+  windHourFour,
+  windHourOne,
+  windHourThree,
+  windHourTwo,
   windSpeed,
 } from "./element.js";
 
@@ -55,9 +90,9 @@ searchIcon.addEventListener("click", () => {
       fetch(sunSetRiseAPI, options)
         .then((response) => response.json())
         .then((sunTime) => {
-          const sunRiseTime = sunTime.results.sunrise.substring("0", "4");
+          const sunRiseTime = sunTime.results.sunrise.substring(0, 4);
           const [hourSunSetTime, minSunSetTime] = sunTime.results.sunset
-            .substring("0", "4")
+            .substring(0, 4)
             .split(":");
           sunRise.innerText = `0${sunRiseTime}`;
           sunSet.innerText = `${(hourSunSetTime += 12)}:${minSunSetTime}`;
@@ -121,11 +156,11 @@ searchIcon.addEventListener("click", () => {
       const dateDaysFourLevel = ((forecast.timelines.daily[4].time).replaceAll("-","/")).split("T");
       const dateDaysFiveLevel = ((forecast.timelines.daily[5].time).replaceAll("-","/")).split("T");
 
-      tempDaysOne.innerText = tempDaysOneLevel + "°C"
-      tempDaysTwo.innerText = tempDaysTwoLevel + "°C"
-      tempDaysThree.innerText = tempDaysThreeLevel + "°C"
-      tempDaysFour.innerText = tempDaysFourLevel + "°C"
-      tempDaysFive.innerText = tempDaysFiveLevel + "°C"
+      tempDaysOne.innerText = Math.round(tempDaysOneLevel) + "°C"
+      tempDaysTwo.innerText = Math.round(tempDaysTwoLevel) + "°C"
+      tempDaysThree.innerText = Math.round(tempDaysThreeLevel) + "°C"
+      tempDaysFour.innerText = Math.round(tempDaysFourLevel) + "°C"
+      tempDaysFive.innerText = Math.round(tempDaysFiveLevel) + "°C"
 
       dateDaysOne.innerText = dateDaysOneLevel[0];
       dateDaysTwo.innerText = dateDaysTwoLevel[0];
@@ -134,6 +169,63 @@ searchIcon.addEventListener("click", () => {
       dateDaysFive.innerText = dateDaysFiveLevel[0];
       
       //* Hourly Forcast
+      
+      const hourOneLevel = `${(time.substring(0,3)) += 1}:00`
+      const hourTwoLevel = `${(time.substring(0,3)) += 2}:00`
+      const hourThreeLevel = `${(time.substring(0,3)) += 3}:00`
+      const hourFourLevel = `${(time.substring(0,3)) += 4}:00`
+      const hourFiveLevel = `${(time.substring(0,3)) += 5}:00`
+      
+      const imgHourOneLevel = forecast.timelines.hourly[1].weatherCode;
+      const imgHourTwoLevel = forecast.timelines.hourly[2].weatherCode;
+      const imgHourThreeLevel = forecast.timelines.hourly[3].weatherCode;
+      const imgHourFourLevel = forecast.timelines.hourly[4].weatherCode;
+      const imgHourFiveLevel = forecast.timelines.hourly[5].weatherCode;
+
+      const tempHourOneLevel = forecast.timelines.hourly[1].temperature;
+      const tempHourTwoLevel = forecast.timelines.hourly[2].temperature;
+      const tempHourThreeLevel = forecast.timelines.hourly[3].temperature;
+      const tempHourFourLevel = forecast.timelines.hourly[4].temperature;
+      const tempHourFiveLevel = forecast.timelines.hourly[5].temperature;
+
+      const windOneLevel = forecast.timelines.hourly[1].windSpeed;
+      const windTwoLevel = forecast.timelines.hourly[2].windSpeed;
+      const windThreeLevel = forecast.timelines.hourly[3].windSpeed;
+      const windFourLevel = forecast.timelines.hourly[4].windSpeed;
+      const windFiveLevel = forecast.timelines.hourly[5].windSpeed;
+
+      hourOne.innerText = hourOneLevel
+      hourTwo.innerText = hourTwoLevel
+      hourThree.innerText = hourThreeLevel
+      hourFour.innerText = hourFourLevel
+      hourFive.innerText = hourFiveLevel
+      swiperHourOne.innerText = hourOneLevel
+      swiperHourTwo.innerText = hourTwoLevel
+      swiperHourThree.innerText = hourThreeLevel
+      swiperHourFour.innerText = hourFourLevel
+      swiperHourFive.innerText = hourFiveLevel
+
+      tempHourOne.innerText = Math.round(tempHourOneLevel) + "°C"
+      tempHourTwo.innerText = Math.round(tempHourTwoLevel) + "°C"
+      tempHourThree.innerText = Math.round(tempHourThreeLevel) + "°C"
+      tempHourFour.innerText = Math.round(tempHourFourLevel) + "°C"
+      tempHourFive.innerText = Math.round(tempHourFiveLevel) + "°C"
+      swiperTempHourOne.innerText = Math.round(tempHourOneLevel) + "°C"
+      swiperTempHourTwo.innerText = Math.round(tempHourTwoLevel) + "°C"
+      swiperTempHourThree.innerText = Math.round(tempHourThreeLevel) + "°C"
+      swiperTempHourFour.innerText = Math.round(tempHourFourLevel) + "°C"
+      swiperTempHourFive.innerText = Math.round(tempHourFiveLevel) + "°C"
+
+      windHourOne.innerText = windOneLevel + "km/h"
+      windHourTwo.innerText = windTwoLevel + "km/h"
+      windHourThree.innerText = windThreeLevel + "km/h"
+      windHourFour.innerText = windFourLevel + "km/h"
+      windHourFive.innerText = windFiveLevel + "km/h"
+      swiperWindHourOne.innerText = windOneLevel + "km/h"
+      swiperWindHourTwo.innerText = windTwoLevel + "km/h"
+      swiperWindHourThree.innerText = windThreeLevel + "km/h"
+      swiperWindHourFour.innerText = windFourLevel + "km/h"
+      swiperWindHourFive.innerText = windFiveLevel + "km/h"
 
     })
     .catch((err) => console.error(err));
