@@ -3,6 +3,11 @@ import {
   cityDate,
   cityElem,
   cityTime,
+  dateDaysFive,
+  dateDaysFour,
+  dateDaysOne,
+  dateDaysThree,
+  dateDaysTwo,
   feelsLike,
   humidityElem,
   pressureElem,
@@ -10,6 +15,11 @@ import {
   searchbar,
   sunRise,
   sunSet,
+  tempDaysFive,
+  tempDaysFour,
+  tempDaysOne,
+  tempDaysThree,
+  tempDaysTwo,
   temperature,
   weatherCodeIcon,
   windSpeed,
@@ -56,7 +66,7 @@ searchIcon.addEventListener("click", () => {
         .catch((err) => {
           console.log(err);
         });
-
+        
       const humidityLevel = realTime.data.values.humidity;
       const pressureLevel = realTime.data.values.pressureSurfaceLevel;
       const temperatureDeg = realTime.data.values.temperature;
@@ -91,7 +101,41 @@ searchIcon.addEventListener("click", () => {
   //* Forecast Weather API
   fetch(APIendPointForecast, options)
     .then((response) => response.json())
-    .then((forecast) => {})
+    .then((forecast) => {
+      //* Five Days Forcast
+      const weatherCodedayOne = forecast.timelines.daily[1].weatherCodeMin;
+      const weatherCodedayTwo = forecast.timelines.daily[2].weatherCodeMin;
+      const weatherCodedayThree = forecast.timelines.daily[3].weatherCodeMin;
+      const weatherCodedayFour = forecast.timelines.daily[4].weatherCodeMin;
+      const weatherCodedayFive = forecast.timelines.daily[5].weatherCodeMin;
+
+      const tempDaysOneLevel = forecast.timelines.daily[1].temperatureAvg;
+      const tempDaysTwoLevel = forecast.timelines.daily[2].temperatureAvg;
+      const tempDaysThreeLevel = forecast.timelines.daily[3].temperatureAvg;
+      const tempDaysFourLevel = forecast.timelines.daily[4].temperatureAvg;
+      const tempDaysFiveLevel = forecast.timelines.daily[5].temperatureAvg;
+
+      const dateDaysOneLevel = ((forecast.timelines.daily[1].time).replaceAll("-","/")).split("T");
+      const dateDaysTwoLevel = ((forecast.timelines.daily[2].time).replaceAll("-","/")).split("T");
+      const dateDaysThreeLevel = ((forecast.timelines.daily[3].time).replaceAll("-","/")).split("T");
+      const dateDaysFourLevel = ((forecast.timelines.daily[4].time).replaceAll("-","/")).split("T");
+      const dateDaysFiveLevel = ((forecast.timelines.daily[5].time).replaceAll("-","/")).split("T");
+
+      tempDaysOne.innerText = tempDaysOneLevel + "°C"
+      tempDaysTwo.innerText = tempDaysTwoLevel + "°C"
+      tempDaysThree.innerText = tempDaysThreeLevel + "°C"
+      tempDaysFour.innerText = tempDaysFourLevel + "°C"
+      tempDaysFive.innerText = tempDaysFiveLevel + "°C"
+
+      dateDaysOne.innerText = dateDaysOneLevel[0];
+      dateDaysTwo.innerText = dateDaysTwoLevel[0];
+      dateDaysThree.innerText = dateDaysThreeLevel[0];
+      dateDaysFour.innerText = dateDaysFourLevel[0];
+      dateDaysFive.innerText = dateDaysFiveLevel[0];
+      
+      //* Hourly Forcast
+
+    })
     .catch((err) => console.error(err));
 
   searchbar.value = "";
