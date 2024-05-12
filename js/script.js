@@ -1,20 +1,5 @@
 import {
-  currentLoc,
-  cityelem,
-  cityTime,
-  cityDate,
-  temperature,
-  feelsLike,
-  sunrise,
-  sunrset,
-  description,
-  humidity,
-  windSpeed,
-  pressureElem,
-  UV,
   html,
-  searchbar,
-  searchIcon,
   dark_mode_toggle,
 } from "./element.js";
 
