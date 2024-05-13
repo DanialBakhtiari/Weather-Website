@@ -1,49 +1,49 @@
+// ? Selector For Dark/Light Mode
+const html = document.querySelector("html");
+const dark_mode_toggle = document.getElementsByClassName("dark_mode_toggle");
+
+// ? Selector For Input, Icon And Current Location
 const currentLoc = document.getElementById("currentLoc");
+const searchbar = document.getElementById("default-search");
+const searchIcon = document.getElementById("searchIcon");
+
+// ? Selector For City Info Section
 const cityElem = document.getElementById("cityElem");
 const cityTime = document.getElementById("cityTime");
 const cityDate = document.getElementById("cityDate");
+
+// ? Selector For Weather Info Section
 const temperature = document.getElementById("temperature");
 const feelsLike = document.getElementById("feelsLike");
 const sunRise = document.getElementById("sunRise");
 const sunSet = document.getElementById("sunSet");
+const weatherCodeIcon = document.getElementById("weatherCodeIcon");
 const description = document.getElementById("description");
 const humidityElem = document.getElementById("humidityElem");
 const windSpeed = document.getElementById("windSpeed");
 const pressureElem = document.getElementById("pressureElem");
 const UV = document.getElementById("UV");
-const html = document.querySelector("html");
-const searchbar = document.getElementById("default-search");
-const searchIcon = document.getElementById("searchIcon");
-const dark_mode_toggle = document.getElementsByClassName("dark_mode_toggle");
-const weatherCodeIcon = document.getElementById("weatherCodeIcon");
 
-const imgDaysOne = document.getElementById("imgDaysOne");
-const imgDaysTwo = document.getElementById("imgDaysTwo");
-const imgDaysThree = document.getElementById("imgDaysThree");
-const imgDaysFour = document.getElementById("imgDaysFour");
-const imgDaysFive = document.getElementById("imgDaysFive");
-const tempDaysOne = document.getElementById("tempDaysOne");
-const tempDaysTwo = document.getElementById("tempDaysTwo");
-const tempDaysThree = document.getElementById("tempDaysThree");
-const tempDaysFour = document.getElementById("tempDaysFour");
-const tempDaysFive = document.getElementById("tempDaysFive");
-const dateDaysOne = document.getElementById("dateDaysOne");
-const dateDaysTwo = document.getElementById("dateDaysTwo");
-const dateDaysThree = document.getElementById("dateDaysThree");
-const dateDaysFour = document.getElementById("dateDaysFour");
-const dateDaysFive = document.getElementById("dateDaysFive");
+// ? Selector For 5Day Forecast Section
+// ! Typo Problem the id selector doesn't match with id in elements
+// ^ Fixed rewrite all of them
+const imgDayOne = document.getElementById("imgDayOne");
+const imgDayTwo = document.getElementById("imgDayTwo");
+const imgDayThree = document.getElementById("imgDayThree");
+const imgDayFour = document.getElementById("imgDayFour");
+const imgDayFive = document.getElementById("imgDayFive");
+const tempDayOne = document.getElementById("tempDayOne");
+const tempDayTwo = document.getElementById("tempDayTwo");
+const tempDayThree = document.getElementById("tempDayThree");
+const tempDayFour = document.getElementById("tempDayFour");
+const tempDayFive = document.getElementById("tempDayFive");
+const dateDayOne = document.getElementById("dateDayOne");
+const dateDayTwo = document.getElementById("dateDayTwo");
+const dateDayThree = document.getElementById("dateDayThree");
+const dateDayFour = document.getElementById("dateDayFour");
+const dateDayFive = document.getElementById("dateDayFive");
 
-const hourOne = document.getElementById("hourOne");
-const hourTwo = document.getElementById("hourTwo");
-const hourThree = document.getElementById("hourThree");
-const hourFour = document.getElementById("hourFour");
-const hourFive = document.getElementById("hourFive");
-const swiperHourOne = document.getElementById("swiperHourOne");
-const swiperHourTwo = document.getElementById("swiperHourTwo");
-const swiperHourThree = document.getElementById("swiperHourThree");
-const swiperHourFour = document.getElementById("swiperHourFour");
-const swiperHourFive = document.getElementById("swiperHourFive");
-
+// ? Selector For Hourly Forecast Section 
 const imgHourOne = document.getElementById("imgHourOne");
 const imgHourTwo = document.getElementById("imgHourTwo");
 const imgHourThree = document.getElementById("imgHourThree");
@@ -66,16 +66,16 @@ const swiperTempHourThree = document.getElementById("swiperTempHourThree");
 const swiperTempHourFour = document.getElementById("swiperTempHourFour");
 const swiperTempHourFive = document.getElementById("swiperTempHourFive");
 
-const windHourOne = document.getElementById("windHourOne");
-const windHourTwo = document.getElementById("windHourTwo");
-const windHourThree = document.getElementById("windHourThree");
-const windHourFour = document.getElementById("windHourFour");
-const windHourFive = document.getElementById("windHourFive");
-const swiperWindHourOne = document.getElementById("swiperWindHourOne");
-const swiperWindHourTwo = document.getElementById("swiperWindHourTwo");
-const swiperWindHourThree = document.getElementById("swiperWindHourThree");
-const swiperWindHourFour = document.getElementById("swiperWindHourFour");
-const swiperWindHourFive = document.getElementById("swiperWindHourFive");
+const windSpeedHourOne = document.getElementById("windSpeedHourOne");
+const windSpeedHourTwo = document.getElementById("windSpeedHourTwo");
+const windSpeedHourThree = document.getElementById("windSpeedHourThree");
+const windSpeedHourFour = document.getElementById("windSpeedHourFour");
+const windSpeedHourFive = document.getElementById("windSpeedHourFive");
+const swiperWindSpeedHourOne = document.getElementById("swiperWindSpeedHourOne");
+const swiperWindSpeedHourTwo = document.getElementById("swiperWindSpeedHourTwo");
+const swiperWindSpeedHourThree = document.getElementById("swiperWindSpeedHourThree");
+const swiperWindSpeedHourFour = document.getElementById("swiperWindSpeedHourFour");
+const swiperWindSpeedHourFive = document.getElementById("swiperWindSpeedHourFive");
 
 export {
   currentLoc,
@@ -96,31 +96,21 @@ export {
   searchIcon,
   dark_mode_toggle,
   weatherCodeIcon,
-  imgDaysOne,
-  imgDaysTwo,
-  imgDaysThree,
-  imgDaysFour,
-  imgDaysFive,
-  tempDaysOne,
-  tempDaysTwo,
-  tempDaysThree,
-  tempDaysFour,
-  tempDaysFive,
-  dateDaysOne,
-  dateDaysTwo,
-  dateDaysThree,
-  dateDaysFour,
-  dateDaysFive,
-  hourOne,
-  hourTwo,
-  hourThree,
-  hourFour,
-  hourFive,
-  swiperHourOne,
-  swiperHourTwo,
-  swiperHourThree,
-  swiperHourFour,
-  swiperHourFive,
+  imgDayOne,
+  imgDayTwo,
+  imgDayThree,
+  imgDayFour,
+  imgDayFive,
+  tempDayOne,
+  tempDayTwo,
+  tempDayThree,
+  tempDayFour,
+  tempDayFive,
+  dateDayOne,
+  dateDayTwo,
+  dateDayThree,
+  dateDayFour,
+  dateDayFive,
   imgHourOne,
   imgHourTwo,
   imgHourThree,
@@ -141,14 +131,14 @@ export {
   swiperTempHourThree,
   swiperTempHourFour,
   swiperTempHourFive,
-  windHourOne,
-  windHourTwo,
-  windHourThree,
-  windHourFour,
-  windHourFive,
-  swiperWindHourOne,
-  swiperWindHourTwo,
-  swiperWindHourThree,
-  swiperWindHourFour,
-  swiperWindHourFive,
+  windSpeedHourOne,
+  windSpeedHourTwo,
+  windSpeedHourThree,
+  windSpeedHourFour,
+  windSpeedHourFive,
+  swiperWindSpeedHourOne,
+  swiperWindSpeedHourTwo,
+  swiperWindSpeedHourThree,
+  swiperWindSpeedHourFour,
+  swiperWindSpeedHourFive,
 };
