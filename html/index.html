@@ -235,26 +235,28 @@
     </div>
   </section>
   <section class="w-full h-auto flex_center mt-12 gap-[55px] mobile:flex-col tablet:flex-col">
+    <!-- ? City Info Section -->
     <div class="w-[510px] h-[330px]  rounded-2xl mobile:w-[370px] tablet:w-[480px] tablet:h-[300px]">
       <div class="w-full h-full glassmorphism rounded-2xl flex_center dark:dark_glassmorphism">
         <div class="flex-col h-auto space-y-8 w-fit flex_center text-textLight dark:text-textDark">
-          <h1 class="text-4xl font-bold" id="cityElem">Toronto</h1>
-          <time class="mx-auto text-6xl font-extrabold " id="cityTime">19:55</time>
-          <span class="text-lg font-extralight " id="cityDate">Monday, 30 Aug</span>
+          <h1 class="text-4xl text-center line-clamp-1 font-bold" id="cityElem">0</h1>
+          <time class="mx-auto text-6xl font-extrabold " id="cityTime">00:00</time>
+          <span class="text-lg font-extralight " id="cityDate">0</span>
         </div>
       </div>
     </div>
+    <!-- ? Weather Info Section -->
     <div class="w-[780px] h-[330px] rounded-2xl mobile:w-[370px] mobile:h-[600px] tablet:w-[480px] tablet:h-[600px] ">
       <div
         class="w-full h-full glassmorphism rounded-2xl flex_center dark:dark_glassmorphism mobile:flex-wrap tablet:flex-wrap">
         <div
-          class="w-1/3 space-y-8 h-fit flex-center text-textLight dark:text-textDark mobile:w-1/2 mobile:pb-4 tablet:w-1/2 tablet:pb-4 laptop:px-4">
+          class="w-1/3 space-y-5 h-fit flex-center text-textLight dark:text-textDark mobile:w-1/2 mobile:pb-4 tablet:w-1/2 tablet:pb-4 laptop:px-4">
           <div class="flex-wrap flex_center">
-            <span class="text-6xl font-extrabold" id="temperature">75°C</span>
-            <div class="">
-              <span class="text-xl font-semibold">Feels like:</span>
-              <span class="text-2xl" id="feelsLike">22°C</span>
-            </div>
+            <span class="text-6xl font-extrabold" id="temperature">0</span>
+          </div>
+          <div class="flex_center">
+            <span class="text-xl font-semibold">Feels like:</span>
+            <span class="text-2xl" id="feelsLike">0</span>
           </div>
           <div class="space-x-4 flex_center">
             <div class="svg_wraper">
@@ -264,7 +266,7 @@
             </div>
             <div class="info_wraper">
               <span class="block w-full text-xl font-bold">Sunrise</span>
-              <span class="font-semibold" id="sunRise">06:37</span>
+              <span class="font-semibold" id="sunRise">00:00</span>
             </div>
           </div>
           <div class="space-x-4 flex_center">
@@ -275,12 +277,12 @@
             </div>
             <div class="info_wraper">
               <span class="block w-full text-xl font-bold">Sunset</span>
-              <span class="font-semibold" id="sunSet">20:37</span>
+              <span class="font-semibold" id="sunSet">00:00</span>
             </div>
           </div>
         </div>
         <div
-          class="flex flex-col items-center justify-center w-1/3 gap-6 h-fit  text-textLight dark:text-textDark mobile:w-1/2 tablet:w-1/2">
+          class="flex flex-col items-center justify-center w-1/3 gap-6 h-fit text-textLight dark:text-textDark mobile:w-1/2 tablet:w-1/2">
           <div class="">
             <img id="weatherCodeIcon" src="../src/images/conditions/1000_clear_large@2x.png" alt="">
           </div>
@@ -293,15 +295,15 @@
               <svg class="w-16 h-16 laptop:w-8 laptop:h-8" fill="currentColor">
                 <use href="#humidity"></use>
               </svg>
-              <span class="text-2xl font-semibold laptop:text-lg" id="humidityElem">41%</span>
-              <h1 class="font-medium laptop:text-sm laptop:text-nowrap">humidity</h1>
+              <span class="text-2xl font-semibold laptop:text-lg" id="humidityElem">0</span>
+              <h1 class="font-medium laptop:text-sm laptop:text-nowrap">Humidity</h1>
             </div>
             <div class="flex flex-col items-center w-1/2 gap-2">
               <svg class="w-16 h-16 laptop:w-8 laptop:h-8" fill="currentColor">
                 <use href="#wind"></use>
               </svg>
-              <span class="text-2xl font-semibold laptop:text-lg" id="windSpeed">2km/h</span>
-              <h1 class="font-medium laptop:text-sm laptop:text-nowrap">wind Speed</h1>
+              <span class="text-2xl font-semibold laptop:text-lg" id="windSpeed">0</span>
+              <h1 class="font-medium laptop:text-sm laptop:text-nowrap">Wind Speed</h1>
             </div>
           </div>
           <div class="flex laptop:pt-2">
@@ -309,14 +311,14 @@
               <svg class="w-16 h-16 laptop:w-8 laptop:h-8" fill="transparent">
                 <use href="#pressure"></use>
               </svg>
-              <span class="text-2xl font-semibold laptop:text-lg" id="pressureElem">997hPa</span>
-              <h1 class="font-medium laptop:text-sm laptop:text-nowrap">pressure</h1>
+              <span class="text-2xl font-semibold laptop:text-lg" id="pressureElem">0</span>
+              <h1 class="font-medium laptop:text-sm laptop:text-nowrap">Pressure</h1>
             </div>
             <div class="flex flex-col items-center w-1/2 gap-2">
               <svg class="w-16 h-16 laptop:w-8 laptop:h-8" fill="currentColor">
                 <use href="#uv"></use>
               </svg>
-              <span class="text-2xl font-semibold laptop:text-lg" id="UV">8</span>
+              <span class="text-2xl font-semibold laptop:text-lg" id="UV">0</span>
               <h1 class="font-medium laptop:text-sm laptop:text-nowrap">UV</h1>
             </div>
           </div>
@@ -325,12 +327,13 @@
     </div>
   </section>
   <section class="w-full h-auto flex_center mt-12 gap-[55px] mobile:flex-col tablet:flex-col laptop:flex-wrap">
-    <!-- ? Hourly Forecast -->
+    <!-- ? Hourly Forecast Section -->
     <div
       class="w-[780px] h-[330px] glassmorphism overflow-hidden space-y-7 rounded-2xl text-textLight dark:text-textDark dark:dark_glassmorphism mobile:w-[370px] tablet:w-[480px] laptop:w-full">
       <h2 class="text-3xl font-extrabold text-center">
         Hourly Forecast
       </h2>
+      <!-- ? Swiper Section Start -->
       <div class="hidden swiper mySwiper mobile:block tablet:block laptop:block">
         <!-- Additional required wrapper -->
         <div
@@ -339,215 +342,220 @@
           <div class="swiper-slide">
             <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
               <!--todo Hour-->
-              <time datetime="" class="" id="swiperHourOne">12:00</time>
+              <time class="" id="swiperHour1">00:00</time>
               <!--todo Weather Icon-->
               <div class="w-12 h-12">
                 <img src="../src/images/conditions/1000_clear_large@2x.png" alt="" id="swiperImgHourOne">
               </div>
-              <span id="swiperTempHourOne">21&degC</span>
+              <span id="swiperTempHourOne">0</span>
               <!--todo Temperature-->
               <svg class="w-14 h-14" fill="#e0f2fe">
                 <!--todo Wind icon-->
                 <use href="#wind"></use>
               </svg>
-              <span id="swiperWindHourOne">3km/h</span>
+              <span id="swiperWindSpeedHourOne">0</span>
               <!--todo Wind Speed-->
             </div>
           </div>
           <div class="swiper-slide">
             <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
               <!--todo Hour-->
-              <time datetime="" class="" id="swiperHourTwo">01:00</time>
+              <time class="" id="swiperHour2">00:00</time>
               <!--todo Weather Icon-->
               <div class="w-12 h-12">
                 <img src="../src/images/conditions/1000_clear_large@2x.png" alt="" id="swiperImgHourTwo">
               </div>
-              <span id="swiperTempHourTwo">18&degC</span>
+              <span id="swiperTempHourTwo">0</span>
               <!--todo Temperature-->
               <svg class="w-14 h-14" fill="#e0f2fe">
                 <!--todo Wind icon-->
                 <use href="#wind"></use>
               </svg>
-              <span id="swiperWindHourTwo">5km/h</span>
+              <span id="swiperWindSpeedHourTwo">0</span>
               <!--todo Wind Speed-->
             </div>
           </div>
           <div class="swiper-slide">
             <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
               <!--todo Hour-->
-              <time datetime="" class="" id="swiperHourThree">02:00</time>
+              <time class="" id="swiperHour3">00:00</time>
               <!--todo Weather Icon-->
               <div class="w-12 h-12">
                 <img src="../src/images/conditions/1000_clear_large@2x.png" alt="" id="swiperImgHourThree">
               </div>
-              <span id="swiperTempHourThree">1&degC</span>
+              <span id="swiperTempHourThree">0</span>
               <!--todo Temperature-->
               <svg class="w-14 h-14" fill="#e0f2fe">
                 <!--todo Wind icon-->
                 <use href="#wind"></use>
               </svg>
-              <span id="swiperWindHourThree">2km/h</span>
+              <span id="swiperWindSpeedHourThree">0</span>
               <!--todo Wind Speed-->
             </div>
           </div>
           <div class="swiper-slide">
             <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
               <!--todo Hour-->
-              <time datetime="" class="" id="swiperHourFour">03:00</time>
+              <time class="" id="swiperHour4">00:00</time>
               <!--todo Weather Icon-->
               <div class="w-12 h-12">
                 <img src="../src/images/conditions/1000_clear_large@2x.png" alt="" id="swiperImgHourFour">
               </div>
-              <span id="swiperTempHourFour">14&degC</span>
+              <span id="swiperTempHourFour">0</span>
               <!--todo Temperature-->
               <svg class="w-14 h-14" fill="#e0f2fe">
                 <!--todo Wind icon-->
                 <use href="#wind"></use>
               </svg>
-              <span id="swiperWindHourFour">10km/h</span>
+              <span id="swiperWindSpeedHourFour">0</span>
               <!--todo Wind Speed-->
             </div>
           </div>
           <div class="swiper-slide">
             <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
               <!--todo Hour-->
-              <time datetime="" class="" id="swiperHourFive">04:00</time>
+              <time class="" id="swiperHour5">00:00</time>
               <!--todo Weather Icon-->
               <div class="w-12 h-12">
                 <img src="../src/images/conditions/1000_clear_large@2x.png" alt="" id="swiperImgHourFive">
               </div>
-              <span id="swiperTempHourFive">11&degC</span>
+              <span id="swiperTempHourFive">0</span>
               <!--todo Temperature-->
               <svg class="w-14 h-14" fill="#e0f2fe">
                 <!--todo Wind icon-->
                 <use href="#wind"></use>
               </svg>
-              <span id="swiperWindHourFive">1km/h</span>
+              <span id="swiperWindSpeedHourFive">0</span>
               <!--todo Wind Speed-->
             </div>
           </div>
         </div>
-      </div> <!-- swiper end -->
+      </div> <!-- ? Swiper Section End -->
 
+      <!-- ? Hourly Forecast Section -->
       <div class="flex items-center h-fit justify-evenly mobile:hidden">
         <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
           <!--todo Hour-->
-          <time datetime="" class="" id="hourOne">12:00</time>
+          <time class="" id="hour1">0:00</time>
           <!--todo Weather Icon-->
           <div class="w-12 h-12">
             <img id="imgHourOne" src="../src/images/conditions/1000_clear_large@2x.png" alt="">
           </div>
-          <span id="tempHourOne">21&degC</span>
+          <span id="tempHourOne">0</span>
           <!--todo Temperature-->
           <svg class="w-14 h-14" fill="#e0f2fe">
             <!--todo Wind icon-->
             <use href="#wind"></use>
           </svg>
-          <span id="windHourOne">3km/h</span>
+          <span id="windSpeedHourOne">0</span>
           <!--todo Wind Speed-->
         </div>
         <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
           <!--todo Hour-->
-          <time datetime="" class="" id="hourTwo">01:00</time>
+          <time class="" id="hour2">0:00</time>
           <!--todo Weather Icon-->
           <div class="w-12 h-12">
             <img id="imgHourTwo" src="../src/images/conditions/1000_clear_large@2x.png" alt="">
           </div>
-          <span id="tempHourTwo">18&degC</span>
+          <span id="tempHourTwo">0</span>
           <!--todo Temperature-->
           <svg class="w-14 h-14" fill="#e0f2fe">
             <!--todo Wind icon-->
             <use href="#wind"></use>
           </svg>
-          <span id="windHourTwo">5km/h</span>
+          <span id="windSpeedHourTwo">0</span>
           <!--todo Wind Speed-->
         </div>
         <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
           <!--todo Hour-->
-          <time datetime="" class="" id="hourThree">02:00</time>
+          <time class="" id="hour3">0:00</time>
           <!--todo Weather Icon-->
           <div class="w-12 h-12">
             <img id="imgHourThree" src="../src/images/conditions/1000_clear_large@2x.png" alt="">
           </div>
-          <span id="tempHourThree">1&degC</span>
+          <span id="tempHourThree">0</span>
           <!--todo Temperature-->
           <svg class="w-14 h-14" fill="#e0f2fe">
             <!--todo Wind icon-->
             <use href="#wind"></use>
           </svg>
-          <span id="windHourThree">2km/h</span>
+          <span id="windSpeedHourThree">0</span>
           <!--todo Wind Speed-->
         </div>
         <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
           <!--todo Hour-->
-          <time datetime="" class="" id="hourFour">03:00</time>
+          <time class="" id="hour4">0:00</time>
           <!--todo Weather Icon-->
           <div class="w-12 h-12">
             <img id="imgHourFour" src="../src/images/conditions/1000_clear_large@2x.png" alt="">
           </div>
-          <span id="tempHourFour">14&degC</span>
+          <span id="tempHourFour">0</span>
           <!--todo Temperature-->
           <svg class="w-14 h-14" fill="#e0f2fe">
             <!--todo Wind icon-->
             <use href="#wind"></use>
           </svg>
-          <span id="windHourFour">10km/h</span>
+          <span id="windSpeedHourFour">0</span>
           <!--todo Wind Speed-->
         </div>
         <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
           <!--todo Hour-->
-          <time datetime="" class="" id="hourFive">04:00</time>
+          <time class="" id="hour5">0:00</time>
           <!--todo Weather Icon-->
           <div class="w-12 h-12">
             <img id="imgHourFive" src="../src/images/conditions/1000_clear_large@2x.png" alt="">
           </div>
-          <span id="tempHourFive">11&degC</span>
+          <span id="tempHourFive">0</span>
           <!--todo Temperature-->
           <svg class="w-14 h-14" fill="#e0f2fe">
             <!--todo Wind icon-->
             <use href="#wind"></use>
           </svg>
-          <span id="windHourFive">1km/h</span>
+          <span id="windSpeedHourFive">0</span>
           <!--todo Wind Speed-->
         </div>
       </div>
     </div>
-    <div
-      class="w-[510px] h-[330px] glassmorphism flex-col flex_center overflow-hidden rounded-2xl dark:dark_glassmorphism mobile:w-[370px] tablet:w-[480px] laptop:w-full laptop:h-fit p-5">
+    <!--? 5 Days Forecasts Section  -->
+    <div class="w-[510px] h-[330px] glassmorphism flex-col flex_center overflow-hidden rounded-2xl dark:dark_glassmorphism mobile:w-[370px] tablet:w-[480px] laptop:w-full laptop:h-fit p-5">
       <div class="w-full ">
-        <div class="w-full"><p class=" text-center font-bold text-3xl">5 Days Forcasts</p></div>
-        <div class=" flex items-center justify-evenly  ">
+        <div class="w-full">
+          <p class="text-3xl font-bold text-center ">5 Days Forcasts</p>
+        </div>
+        <div class="flex items-center  justify-evenly">
           <img id="imgDayOne" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
-          <span class="font-bold text-2xl" id="TempDayOne">22°C</span>
-          <span class="font-bold text-2xl" id="dateDayOne">Friday, 1 Sep</span>
+          <span class="text-2xl line-clamp-100 font-bold" id="tempDayOne">0</span>
+          <span class="text-2xl line-clamp-1 font-bold" id="dateDayOne">0</span>
         </div>
-        <div class=" flex items-center justify-evenly  ">
-          <img id="imgDaysTwo" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
-          <span class="font-bold text-2xl" id="TempDaysTwo">22°C</span>
-          <span class="font-bold text-2xl" id="dateDaysTwo">Friday, 1 Sep</span>
+        <div class="flex items-center  justify-evenly">
+          <img id="imgDayTwo" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
+          <span class="text-2xl line-clamp-1 font-bold" id="tempDayTwo">0</span>
+          <span class="text-2xl line-clamp-1 font-bold" id="dateDayTwo">0</span>
         </div>
-        <div class=" flex items-center justify-evenly  ">
-          <img id="imgDaysThree" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
-          <span class="font-bold text-2xl" id="TempDaysThree">22°C</span>
-          <span class="font-bold text-2xl" id="dateDaysThree">Friday, 1 Sep</span>
+        <div class="flex items-center  justify-evenly">
+          <img id="imgDayThree" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
+          <span class="text-2xl line-clamp-1 font-bold" id="tempDayThree">0</span>
+          <span class="text-2xl line-clamp-1 font-bold" id="dateDayThree">0</span>
         </div>
-        <div class=" flex items-center justify-evenly  ">
-          <img id="imgDaysFour" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
-          <span class="font-bold text-2xl" id="TempDaysFour">22°C</span>
-          <span class="font-bold text-2xl" id="dateDaysFour">Friday, 1 Sep</span>
+        <div class="flex items-center  justify-evenly">
+          <img id="imgDayFour" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
+          <span class="text-2xl line-clamp-1 font-bold" id="tempDayFour">0</span>
+          <span class="text-2xl line-clamp-1 font-bold" id="dateDayFour">0</span>
         </div>
-        <div class=" flex items-center justify-evenly  ">
-          <img id="imgDaysFive" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
-          <span class="font-bold text-2xl" id="TempDaysFive">22°C</span>
-          <span class="font-bold text-2xl" id="dateDaysFive">Friday, 1 Sep</span>
+        <div class="flex items-center  justify-evenly">
+          <img id="imgDayFive" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-14 h-14">
+          <span class="text-2xl line-clamp-1 font-bold" id="tempDayFive">0</span>
+          <span class="text-2xl line-clamp-1 font-bold" id="dateDayFive">0</span>
         </div>
       </div>
-      
+
     </div>
   </section>
-  <section class="w-full h-auto flex_center glassmorphism flex-col overflow-hidden mt-12   laptop:flex-wrap rounded-2xl mobile:w-full tablet:w-[480px] dark:dark_glassmorphism laptop:w-full tablet:p-0">
+  <!-- ? About This Project Section -->
+  <section
+    class="w-full h-auto flex_center glassmorphism flex-col overflow-hidden mt-12   laptop:flex-wrap rounded-2xl mobile:w-full tablet:w-[480px] dark:dark_glassmorphism laptop:w-full tablet:p-0">
     <div>
-      <p class="p-5 text-textLight dark:text-textDark text-justify hyphens-auto tracking-wide  ">
+      <p class="p-5 tracking-wide text-justify text-textLight dark:text-textDark hyphens-auto ">
         This weather webpage is a collaborative effort between
         <a href="https://github.com/DanialBakhtiari" target="_blank" class="text-sky-300">Danial Bakhtiari</a>
         and
@@ -563,8 +571,9 @@
       </p>
     </div>
     <div class="w-full ">
-      <div class="w-auto h-auto flex flex-row-reverse ">
-        <a target="_blank" href="https://www.tomorrow.io/"><img class="w-60  pb-1" src="../src/images/tomorrow_icon/Powered_by_Tomorrow-White.png" alt="TomorrowIcon"></a>
+      <div class="flex flex-row-reverse w-auto h-auto ">
+        <a target="_blank" href="https://www.tomorrow.io/"><img class="pb-1 w-60"
+            src="../src/images/tomorrow_icon/Powered_by_Tomorrow-White.png" alt="TomorrowIcon"></a>
       </div>
     </div>
   </section>
