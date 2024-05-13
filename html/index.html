@@ -194,23 +194,23 @@
   <section class="container py-4 space-y-6">
     <section class="flex items-baseline justify-between w-full">
       <!-- ? Dark/Light Mode Toggle -->
-      <!-- mobile:mr-1 tablet:mr-2 -->
-      <div class="self-center">
+      <!-- mobile:mr-1 tablet:mr-2 mw-->
+      <div class="self-center mr-1 mobile:mr-2 tablet:mr-1">
         <label class="inline-flex items-center cursor-pointer">
           <input type="checkbox" value="" class="sr-only peer">
-          <!-- mobile:hidden laptop:me-2 laptop:text-xs -->
-          <span class="text-sm font-medium text-white dark_mode_toggle me-3 ">Light</span>
+          <!-- mobile:hidden laptop:me-2 laptop:text-xs mw-->
+          <span class="text-xs me-2 hidden font-medium text-white dark_mode_toggle mobile:inline laptop:me-3 laptop:text-sm">Light</span>
           <div
             class="dark_mode_toggle relative w-11 h-6 bg-yellow-400 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-black">
           </div>
           <!-- mobile:hidden laptop:ms-2 laptop:text-xs -->
-          <span class="text-sm font-medium text-white dark_mode_toggle ms-3 ">Dark</span>
+          <span class="text-xs ms-2 hidden font-medium text-white dark_mode_toggle mobile:inline laptop:ms-3 laptop:text-sm">Dark</span>
         </label>
       </div>
       <!-- ? Search Bar-->
       <div class="self-center">
-        <!-- mobile:w-[218px] mobile:mr-1 tablet:w-[230px] tablet:mr-2 laptop:mr-1 laptop:max-w-[410px] -->
-        <form class="w-[621px] overflow-hidden rounded-full ">
+        <!-- mobile:w-[218px] mobile:mr-1 tablet:w-[230px] tablet:mr-2 laptop:mr-1 laptop:max-w-[410px] w-[621px] mw-->
+        <form class="w-[218px] mr-1 mobile:w-[230px] mobile:mr-2 tablet:w-[410px] tablet:mr-1 laptop:min-w-[621px] overflow-hidden rounded-full ">
           <div class="relative">
             <div id="searchIcon"
               class="absolute inset-y-0 flex items-center cursor-pointer start-0 ps-3 dark:text-searchbar">
@@ -218,36 +218,36 @@
                 <use href="#search"></use>
               </svg>
             </div>
-            <!-- mobile:h-[45px] -->
+            <!-- mobile:h-[45px] mw-->
             <input type="text" id="default-search"
-              class="block w-full p-4 text-sm rounded-lg ps-14 bg-searchbar focus-visible:outline-none dark:bg-boxDark dark:text-searchbar"
+              class="block w-full p-4 text-sm rounded-lg ps-14 bg-searchbar focus-visible:outline-none dark:bg-boxDark dark:text-searchbar h-[45px] mobile:h-auto"
               placeholder="Search for your preferred city..." />
           </div>
         </form>
       </div>
       <!-- ? Current Location btn-->
       <div class="self-center">
-        <!-- mobile:w-[85px] mobile:h-[45px] mobile:flex_center tablet:w-[90px] tablet:h-[45px] tablet:flex_center -->
+        <!-- mobile:w-[85px] mobile:h-[45px] mobile:flex_center tablet:w-[90px] tablet:h-[45px] tablet:flex_center flex items-center justify-around mw-->
         <button type="button" id="currentLoc"
-          class="flex items-center justify-around p-3 text-xl font-bold text-white bg-green-500 rounded-full hover:bg-green-600 dark:bg-boxDark dark:text-green-500 dark:hover:bg-green-900">
-          <!-- laptop:w-5 laptop:h-5 -->
-          <svg class="w-7 h-7 ">
+          class="flex_center w-[85px] h-[45px] p-3 text-xl font-bold text-white bg-green-500 rounded-full hover:bg-green-600 dark:bg-boxDark dark:text-green-500 dark:hover:bg-green-900 mobile:w-[90px] mobile:h-[45px]  tablet:flex tablet:items-center tablet:justify-around tablet:w-auto">
+          <!-- laptop:w-5 laptop:h-5 mw-->
+          <svg class="w-5 h-5 laptop:w-7 laptop:h-7 ">
             <use href="#currentLocation"></use>
           </svg>
-          <!-- mobile:hidden tablet:hidden laptop:text-sm text-nowrap btnloc:hidden -->
-          <span class="text-lg ">
-            <!-- laptop:hidden -->
-            <span class="">Current</span>
+          <!-- mobile:hidden tablet:hidden laptop:text-sm text-nowrap mw btnloc:hidden -->
+          <span class="text-sm hidden tablet:inline text-nowrap laptop:text-lg ">
+            <!-- laptop:hidden mw-->
+            <span class="hidden laptop:inline">Current</span>
             Location
           </span>
         </button>
       </div>
     </section>
-    <!-- mobile:flex-col tablet:flex-col -->
-    <section class="w-full h-auto flex_between gap-[55px] ">
+    <!-- mobile:flex-col tablet:flex-col mw -->
+    <section class="w-full h-auto flex-col flex_between tablet:flex-row gap-[55px] ">
       <!-- ? City Info Section -->
-      <!-- mobile:w-[370px] tablet:w-[480px] tablet:h-[300px] -->
-      <div class="w-[510px] h-[330px]  rounded-2xl ">
+      <!-- mobile:w-[370px] tablet:w-[480px] tablet:h-[300px] w-[510px] h-[330px] mw-->
+      <div class="w-[370px] h-[300px] mobile:w-[480px] tablet:h-[330px] tablet:w-[510px]  rounded-2xl ">
         <div class="w-full h-full glassmorphism rounded-2xl flex_center dark:dark_glassmorphism">
           <div class="flex-col h-auto space-y-8 w-fit flex_center text-textLight dark:text-textDark">
             <h1 class="text-4xl font-bold text-center line-clamp-1" id="cityElem">0</h1>
@@ -257,12 +257,12 @@
         </div>
       </div>
       <!-- ? Weather Info Section -->
-      <!-- mobile:w-[370px] mobile:h-[600px] tablet:w-[480px] tablet:h-[600px] -->
-      <div class="w-[780px] h-[330px] rounded-2xl  ">
-        <!-- mobile:flex-wrap tablet:flex-wrap -->
-        <div class="w-full h-full glassmorphism rounded-2xl flex_center dark:dark_glassmorphism ">
-          <!-- mobile:w-1/2 mobile:pb-4 tablet:w-1/2 tablet:pb-4 laptop:px-4 -->
-          <div class="w-1/3 space-y-5 h-fit flex-center text-textLight dark:text-textDark ">
+      <!-- mobile:w-[370px] mobile:h-[600px] tablet:w-[480px] tablet:h-[600px] w-[780px] h-[330px] mw-->
+      <div class=" rounded-2xl w-[370px] h-[600px] mobile:w-[480px] tablet:w-[780px] tablet:h-[330px]">
+        <!-- mobile:flex-wrap tablet:flex-wrap mw-->
+        <div class="w-full h-full flex-wrap glassmorphism rounded-2xl flex_center dark:dark_glassmorphism tablet:flex-nowrap">
+          <!-- mobile:w-1/2 mobile:pb-4 tablet:w-1/2 tablet:pb-4 laptop:px-4 w-1/3 mw-->
+          <div class="w-1/2 pb-4 px-4 laptop:px-0 tablet:w-1/3 tablet:pb-0 space-y-5 h-fit flex-center text-textLight dark:text-textDark ">
             <div class="flex-wrap flex_center">
               <span class="text-6xl font-extrabold" id="temperature">0</span>
             </div>
@@ -293,79 +293,79 @@
               </div>
             </div>
           </div>
-          <!-- mobile:w-1/2 tablet:w-1/2 -->
-          <div class="flex flex-col items-center justify-center w-1/3 gap-6 h-fit text-textLight dark:text-textDark ">
+          <!-- mobile:w-1/2 tablet:w-1/2 mw-->
+          <div class="flex flex-col w-1/2 items-center justify-center tablet:w-1/3 gap-6 h-fit text-textLight dark:text-textDark ">
             <div class="">
               <img id="weatherCodeIcon" src="../src/images/conditions/1000_clear_large@2x.png" alt="">
             </div>
             <h1 class="block text-3xl font-bold text-center" id="description">Sunny</h1>
           </div>
-          <!-- mobile:w-full mobile:pb-3 tablet:w-full tablet:pb-3 -->
-          <div class="flex flex-col w-1/3 h-fit text-textLight dark:text-textDark ">
+          <!-- mobile:w-full mobile:pb-3 tablet:w-full tablet:pb-3 mw-->
+          <div class="flex flex-col w-full tablet:w-1/3 pb-3 tablet:pb-0 h-fit text-textLight dark:text-textDark ">
             <div class="flex">
               <div class="flex flex-col items-center w-1/2 gap-2">
-                <!-- laptop:w-8 laptop:h-8 -->
-                <svg class="w-16 h-16 " fill="currentColor">
+                <!-- laptop:w-8 laptop:h-8 mw-->
+                <svg class="w-8 h-8 laptop:w-16  laptop:h-16" fill="currentColor">
                   <use href="#humidity"></use>
                 </svg>
-                <!-- laptop:text-lg -->
-                <span class="text-2xl font-semibold " id="humidityElem">0</span>
-                <!-- laptop:text-sm laptop:text-nowrap -->
-                <h1 class="font-medium ">Humidity</h1>
+                <!-- laptop:text-lg mw-->
+                <span class="text-lg laptop:text-2xl font-semibold " id="humidityElem">0</span>
+                <!-- laptop:text-sm laptop:text-nowrap mw-->
+                <h1 class="text-sm text-nowrap font-medium laptop:text-wrap laptop:text-base">Humidity</h1>
               </div>
               <div class="flex flex-col items-center w-1/2 gap-2">
-                <!-- laptop:w-8 laptop:h-8 -->
-                <svg class="w-16 h-16 " fill="currentColor">
+                <!-- laptop:w-8 laptop:h-8 mw-->
+                <svg class="w-8 h-8 laptop:w-16  laptop:h-16" fill="currentColor">
                   <use href="#wind"></use>
                 </svg>
-                <!-- laptop:text-lg -->
-                <span class="text-2xl font-semibold " id="windSpeed">0</span>
-                <!-- laptop:text-sm laptop:text-nowrap -->
-                <h1 class="font-medium ">Wind Speed</h1>
+                <!-- laptop:text-lg mw-->
+                <span class="laptop:text-2xl text-lg font-semibold " id="windSpeed">0</span>
+                <!-- laptop:text-sm laptop:text-nowrap mw-->
+                <h1 class="font-medium text-sm text-nowrap laptop:text-base laptop:text-wrap">Wind Speed</h1>
               </div>
             </div>
-            <!-- laptop:pt-2 -->
-            <div class="flex ">
+            <!-- laptop:pt-2 mw-->
+            <div class="flex pt-2 laptop:pt-0">
               <div class="flex flex-col items-center w-1/2 gap-2">
-                <!-- laptop:w-8 laptop:h-8 -->
-                <svg class="w-16 h-16 " fill="transparent">
+                <!-- laptop:w-8 laptop:h-8 mw-->
+                <svg class="w-8 h-8 laptop:w-16  laptop:h-16" fill="transparent">
                   <use href="#pressure"></use>
                 </svg>
-                <!-- laptop:text-lg -->
-                <span class="text-2xl font-semibold " id="pressureElem">0</span>
-                <!-- laptop:text-sm laptop:text-nowrap -->
-                <h1 class="font-medium ">Pressure</h1>
+                <!-- laptop:text-lg mw-->
+                <span class="text-lg laptop:text-2xl font-semibold " id="pressureElem">0</span>
+                <!-- laptop:text-sm laptop:text-nowrap mw-->
+                <h1 class="font-medium text-nowrap text-sm laptop:text-base laptop:text-wrap">Pressure</h1>
               </div>
               <div class="flex flex-col items-center w-1/2 gap-2">
-                <!-- laptop:w-8 laptop:h-8 -->
-                <svg class="w-16 h-16 " fill="currentColor">
+                <!-- laptop:w-8 laptop:h-8 mw-->
+                <svg class="w-8 h-8 laptop:w-16  laptop:h-16" fill="currentColor">
                   <use href="#uv"></use>
                 </svg>
-                <!-- laptop:text-lg -->
-                <span class="text-2xl font-semibold " id="UV">0</span>
-                <!-- laptop:text-sm laptop:text-nowrap -->
-                <h1 class="font-medium ">UV</h1>
+                <!-- laptop:text-lg mw-->
+                <span class="laptop:text-2xl text-lg font-semibold " id="UV">0</span>
+                <!-- laptop:text-sm laptop:text-nowrap mw-->
+                <h1 class="font-medium text-nowrap text-sm laptop:text-base laptop:text-wrap">UV</h1>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- mobile:flex-col tablet:flex-col laptop:flex-wrap -->
-    <section class="w-full h-auto flex_between gap-[55px] ">
+    <!-- mobile:flex-col tablet:flex-col laptop:flex-wrap mw-->
+    <section class="w-full h-auto flex_between gap-[55px] flex-col flex-wrap laptop:flex-nowrap tablet:flex-row ">
       <!-- ? Hourly Forecast Section -->
-      <!-- mobile:w-[370px] tablet:w-[480px] laptop:w-full -->
+      <!-- mobile:w-[370px] tablet:w-[480px] laptop:w-full w-[780px] h-[330px] mw-->
       <div
-        class="w-[780px] h-[330px] glassmorphism overflow-hidden space-y-7 rounded-2xl text-textLight dark:text-textDark dark:dark_glassmorphism ">
+        class="w-[370px] h-[330px] mobile:w-[480px] tablet:w-full laptop:w-[780px] glassmorphism overflow-hidden space-y-7 rounded-2xl text-textLight dark:text-textDark dark:dark_glassmorphism ">
         <h2 class="text-3xl font-extrabold text-center">
           Hourly Forecast
         </h2>
         <!-- ? Swiper Section Start -->
-        <!-- mobile:block tablet:block laptop:block -->
-        <div class="hidden swiper mySwiper ">
+        <!-- mobile:block tablet:block laptop:block mw-->
+        <div class="block tablet:hidden swiper mySwiper ">
           <!-- Additional required wrapper -->
-          <!-- mobile:h-fit mobile:flex mobile:justify-evenly mobile:items-center tablet:h-fit tablet:flex tablet:justify-evenly tablet:items-center laptop:flex laptop:h-fit laptop:justify-evenly laptop:items-center -->
-          <div class="hidden swiper-wrapper ">
+          <!-- mobile:h-fit mobile:flex mobile:justify-evenly mobile:items-center tablet:h-fit tablet:flex tablet:justify-evenly tablet:items-center laptop:flex laptop:h-fit laptop:justify-evenly laptop:items-center mw-->
+          <div class="laptop:hidden swiper-wrapper h-fit flex justify-evenly items-center">
             <!-- Slides -->
             <div class="swiper-slide">
               <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
@@ -461,8 +461,8 @@
         </div> <!-- ? Swiper Section End -->
 
         <!-- ? Hourly Forecast Section -->
-        <!-- mobile:hidden -->
-        <div class="flex items-center h-fit justify-evenly ">
+        <!-- mobile:hidden mw-->
+        <div class="hidden mobile:flex items-center h-fit justify-evenly ">
           <div class="flex-col p-5 space-y-2 flex_center glassmorphism2 rounded-3xl dark:dark_glassmorphism2">
             <!--todo Hour-->
             <time class="" id="hour1">0:00</time>
@@ -546,9 +546,9 @@
         </div>
       </div>
       <!--? 5 Days Forecasts Section  -->
-      <!-- mobile:w-[370px] tablet:w-[480px] laptop:w-full laptop:h-fit -->
+      <!-- mobile:w-[370px] tablet:w-[480px] laptop:w-full laptop:h-fit w-[510px] h-[330px] mw-->
       <div
-        class="w-[510px] h-[330px] glassmorphism flex_center flex-wrap overflow-hidden rounded-2xl text-textLight dark:text-textDark dark:dark_glassmorphism ">
+        class="w-[370px] h-fit mobile:w-[480px] tablet:w-full laptop:w-[510px] laptop:h-[330px] glassmorphism flex_center flex-wrap overflow-hidden rounded-2xl text-textLight dark:text-textDark dark:dark_glassmorphism ">
         <h2 class="text-3xl font-extrabold text-center">5 Days Forecast</h2>
         <div class="flex items-center justify-around w-full">
           <img id="imgDayOne" src="../src/images/conditions/1000_clear_large@2x.png" alt="" class="w-11 h-11">
@@ -580,7 +580,7 @@
     <!-- ? About This Project Section -->
     <!-- laptop:flex-wrap rounded-2xl mobile:w-full tablet:w-[480px] laptop:w-full tablet:p-0 -->
     <section
-      class="flex-col w-full h-auto overflow-hidden flex_between glassmorphism rounded-2xl dark:dark_glassmorphism ">
+      class="flex-wrap flex laptop:flex-col w-[370px] mobile:w-[480px] tablet:w-full h-auto overflow-hidden mx-auto flex_center glassmorphism rounded-2xl dark:dark_glassmorphism ">
       <div>
         <p class="p-5 tracking-wide text-justify text-textLight dark:text-textDark hyphens-auto ">
           This weather webpage is a collaborative effort between
