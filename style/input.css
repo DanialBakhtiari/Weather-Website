@@ -84,19 +84,19 @@
   }
 
   .glassmorphism {
-    @apply bg-boxLight bg-opacity-40 backdrop-blur-md;
+    @apply bg-boxLight bg-opacity-30 backdrop-blur-md;
   }
 
   .dark_glassmorphism {
-    @apply bg-boxDark bg-opacity-40 backdrop-blur-md;
+    @apply bg-boxDark bg-opacity-30 backdrop-blur-md;
   }
 
   .glassmorphism2 {
-    @apply bg-cyan-700 bg-opacity-60 backdrop-blur-lg;
+    @apply bg-cyan-700 bg-opacity-20 backdrop-blur-lg;
   }
 
   .dark_glassmorphism2 {
-    @apply bg-boxLight bg-opacity-30 backdrop-blur-lg;
+    @apply bg-boxLight bg-opacity-20 backdrop-blur-lg;
   }
 
   .swiper {
