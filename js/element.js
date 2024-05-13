@@ -43,7 +43,7 @@ const dateDayThree = document.getElementById("dateDayThree");
 const dateDayFour = document.getElementById("dateDayFour");
 const dateDayFive = document.getElementById("dateDayFive");
 
-// ? Selector For Hourly Forecast Section 
+// ? Selector For Hourly Forecast Section
 const imgHourOne = document.getElementById("imgHourOne");
 const imgHourTwo = document.getElementById("imgHourTwo");
 const imgHourThree = document.getElementById("imgHourThree");
@@ -71,11 +71,161 @@ const windSpeedHourTwo = document.getElementById("windSpeedHourTwo");
 const windSpeedHourThree = document.getElementById("windSpeedHourThree");
 const windSpeedHourFour = document.getElementById("windSpeedHourFour");
 const windSpeedHourFive = document.getElementById("windSpeedHourFive");
-const swiperWindSpeedHourOne = document.getElementById("swiperWindSpeedHourOne");
-const swiperWindSpeedHourTwo = document.getElementById("swiperWindSpeedHourTwo");
-const swiperWindSpeedHourThree = document.getElementById("swiperWindSpeedHourThree");
-const swiperWindSpeedHourFour = document.getElementById("swiperWindSpeedHourFour");
-const swiperWindSpeedHourFive = document.getElementById("swiperWindSpeedHourFive");
+const swiperWindSpeedHourOne = document.getElementById(
+  "swiperWindSpeedHourOne"
+);
+const swiperWindSpeedHourTwo = document.getElementById(
+  "swiperWindSpeedHourTwo"
+);
+const swiperWindSpeedHourThree = document.getElementById(
+  "swiperWindSpeedHourThree"
+);
+const swiperWindSpeedHourFour = document.getElementById(
+  "swiperWindSpeedHourFour"
+);
+const swiperWindSpeedHourFive = document.getElementById(
+  "swiperWindSpeedHourFive"
+);
+
+const weatherChanger = (weatherCode,forecastIcon,localHour) => {
+  switch (weatherCode) {
+    case 1000:
+      forecastIcon.src = `../src/images/conditions/1000_clear_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Sunny`;
+      }
+      break;
+    case 1001:
+      forecastIcon.src = `../src/images/conditions/1001_cloudy_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Cloudy`;
+      }
+      break;
+    case 1100:
+      forecastIcon.src = `../src/images/conditions/1100_mostly_clear_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Mostly Sunny`;
+      }
+      break;
+    case 1101:
+      forecastIcon.src = `../src/images/conditions/1101_partly_cloudy_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Partly Cloudy`;
+      }
+      break;
+    case 1102:
+      forecastIcon.src = `../src/images/conditions/1102_mostly_cloudy_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Mostly Cloudy`;
+      }
+      break;
+    case 2000:
+      forecastIcon.src = `../src/images/conditions/2000_fog_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Fogy`;
+      }
+      break;
+    case 2100:
+      forecastIcon.src = `../src/images/conditions/2100_fog_light_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Light Fog`;
+      }
+      break;
+    case 4000:
+      forecastIcon.src = `../src/images/conditions/4000_drizzle_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Drizzle`;
+      }
+      break;
+    case 4001:
+      forecastIcon.src = `../src/images/conditions/4001_rain_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Rain`;
+      }
+      break;
+    case 4200:
+      forecastIcon.src = `../src/images/conditions/4200_rain_light_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Light Rain`;
+      }
+      break;
+    case 4201:
+      forecastIcon.src = `../src/images/conditions/4201_rain_heavy_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Heavy Rain`;
+      }
+      break;
+    case 5001:
+      forecastIcon.src = `../src/images/conditions/5001_flurries_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Flurries`;
+      }
+      break;
+    case 5100:
+      forecastIcon.src = `../src/images/conditions/5100_snow_light_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Light Snow`;
+      }
+      break;
+    case 5101:
+      forecastIcon.src = `../src/images/conditions/5101_snow_heavy_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Heavy Snow`;
+      }
+      break;
+    case 6000:
+      forecastIcon.src = `../src/images/conditions/6000_freezing_rain_drizzle_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Freezing Rain Drizzle`;
+      }
+      break;
+    case 6001:
+      forecastIcon.src = `../src/images/conditions/6001_freezing_rain_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Freezing Rain`;
+      }
+      break;
+    case 6200:
+      forecastIcon.scr = `../src/images/conditions/6200_freezing_rain_light_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Freezing Light Rain`;
+      }
+      break;
+    case 6201:
+      forecastIcon.scr = `../src/images/conditions/6201_freezing_rain_heavy_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Freezing Heavy Rain`;
+      }
+      break;
+    case 7000:
+      forecastIcon.scr = `../src/images/conditions/7000_ice_pellets_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Ice Pellets`;
+      }
+      break;
+    case 7101:
+      forecastIcon.scr = `../src/images/conditions/7101_ice_pellets_heavy_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Heavy Ice Pellets`;
+      }
+      break;
+    case 7102:
+      forecastIcon.scr = `../src/images/conditions/7102_ice_pellets_light_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Light Ice Pellets`;
+      }
+      break;
+    case 8000:
+      forecastIcon.scr = `../src/images/conditions/8000_tstorm_large@2x.png`;
+      if (forecastIcon == weatherCodeIcon) {
+        description.innerText = `Thunderstorm`;
+      }
+      break;
+
+    default:
+      break;
+  }
+};
 
 export {
   currentLoc,
@@ -141,4 +291,5 @@ export {
   swiperWindSpeedHourThree,
   swiperWindSpeedHourFour,
   swiperWindSpeedHourFive,
+  weatherChanger,
 };
