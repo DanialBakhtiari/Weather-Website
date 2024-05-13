@@ -79,6 +79,10 @@
     @apply flex justify-center items-center;
   }
 
+  .flex_between {
+    @apply flex justify-between items-center
+  }
+
   .glassmorphism {
     @apply bg-boxLight bg-opacity-40 backdrop-blur-md;
   }
