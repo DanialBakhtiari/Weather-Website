@@ -92,6 +92,20 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .clear_night {
+    height: 100%;
+    background-image: url(../src/images/bg_conditions/clear_night.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .cloudy_night {
+    height: 100%;
+    background-image: url(../src/images/bg_conditions/cloudy_night.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .windy {
     height: 100%;
     background-image: url(../src/images/bg_conditions/windy.jpg);

@@ -611,6 +611,46 @@ body:is(.dark *) {
   }
 }
 
+.cloudy {
+  height: 100dvh;
+  background-image: url(../src/images/bg_conditions/cloudy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fogy {
+  height: 100%;
+  background-image: url(../src/images/bg_conditions/fogy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lightning {
+  height: 100%;
+  background-image: url(../src/images/bg_conditions/lightning.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rainy {
+  height: 100dvh;
+  background-image: url(../src/images/bg_conditions/rainy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.snowy {
+  height: 100%;
+  background-image: url(../src/images/bg_conditions/snow.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .freezing_rain {
   height: 100%;
   background-image: url(../src/images/bg_conditions/freezing_rain.jpg);
@@ -619,9 +659,57 @@ body:is(.dark *) {
   background-size: cover;
 }
 
+.flurries {
+  height: 100%;
+  background-image: url(../src/images/bg_conditions/flurries.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.storm {
+  height: 100%;
+  background-image: url(../src/images/bg_conditions/storm.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .ice_pellets {
   height: 100%;
   background-image: url(../src/images/bg_conditions/ice_pellets.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mostly_sunny {
+  height: 100%;
+  background-image: url(../src/images/bg_conditions/mostly_sunny.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sunny {
+  height: 100%;
+  background-image: url(../src/images/bg_conditions/sunny.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clear_night {
+  height: 100%;
+  background-image: url(../src/images/bg_conditions/clear_night.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cloudy_night {
+  height: 100%;
+  background-image: url(../src/images/bg_conditions/cloudy_night.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
