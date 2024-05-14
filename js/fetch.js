@@ -1,5 +1,6 @@
 import {
   UV,
+  backgroundChanger,
   cityDate,
   cityElem,
   cityTime,
@@ -83,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
           cityTime.innerText = time.substring(0, 5);
           cityDate.innerText = date.replaceAll("-", "/");
           cityElem.innerText = localTime.cityName;
+          const localHour = +time.substring(0, 2);
 
           //* sunSetRise API
           const sunSetRiseAPI = `https://api.sunrisesunset.io/json?lat=${userLat}&lng=${userLon}`;
@@ -120,7 +122,9 @@ document.addEventListener("DOMContentLoaded", () => {
               windSpeed.innerText = `${windSpeedLevel}km/h`;
 
               // todo Complete WeatherCodes And The Description For PNG
-              weatherChanger(weatherCode, weatherCodeIcon);
+
+              backgroundChanger(weatherCode, localHour);
+              weatherChanger(weatherCode, weatherCodeIcon, localHour);
             });
 
           //* Forecast API
@@ -133,8 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
               fetch(forecastTimeZoneAPI, options)
                 .then((response) => response.json())
                 .then((forecastTimeZoneAPI) => {
-                  const [date, time] =
-                    forecastTimeZoneAPI.formatted.split(" ");
+                  const [date, time] = forecastTimeZoneAPI.formatted.split(" ");
 
                   // ? Tested output is ok
                   for (let i = 1; i < 6; i++) {
@@ -152,6 +155,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (hourElement && swiperHourElement) {
                       hourElement.innerText = `${formattedHour}:00`;
                       swiperHourElement.innerText = `${formattedHour}:00`;
+                      weatherChanger(weatherCodeHourOne,imgHourOne);
+                      weatherChanger(weatherCodeHourTwo,imgHourTwo);
+                      weatherChanger(weatherCodeHourThree,imgHourThree);
+                      weatherChanger(weatherCodeHourFour,imgHourFour);
+                      weatherChanger(weatherCodeHourFive,imgHourFive);
+
+                      //* Forecast Mobile And Tablet
+                      weatherChanger(weatherCodeHourOne,swiperImgHourOne);
+                      weatherChanger(weatherCodeHourTwo,swiperImgHourTwo);
+                      weatherChanger(weatherCodeHourThree,swiperImgHourThree);
+                      weatherChanger(weatherCodeHourFour,swiperImgHourFour);
+                      weatherChanger(weatherCodeHourFive,swiperImgHourFive);
                     }
                   }
                 });
@@ -230,20 +245,6 @@ document.addEventListener("DOMContentLoaded", () => {
               const weatherCodeHourFive =
                 forecast.timelines.hourly[5].values.weatherCode;
 
-              //* Forecast Laptop And Desktop
-              weatherChanger(weatherCodeHourOne, imgHourOne);
-              weatherChanger(weatherCodeHourTwo, imgHourTwo);
-              weatherChanger(weatherCodeHourThree, imgHourThree);
-              weatherChanger(weatherCodeHourFour, imgHourFour);
-              weatherChanger(weatherCodeHourFive, imgHourFive);
-
-              //* Forecast Mobile And Tablet
-              weatherChanger(weatherCodeHourOne, swiperImgHourOne);
-              weatherChanger(weatherCodeHourTwo, swiperImgHourTwo);
-              weatherChanger(weatherCodeHourThree, swiperImgHourThree);
-              weatherChanger(weatherCodeHourFour, swiperImgHourFour);
-              weatherChanger(weatherCodeHourFive, swiperImgHourFive);
-
               const tempHourOneLevel = Math.round(
                 forecast.timelines.hourly[1].values.temperature
               );
@@ -300,8 +301,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+//^ DOMContentLoaded Start Keypress, CurrentLocation Button And Click Events
 document.addEventListener("DOMContentLoaded", () => {
-
   //^ Current Location Click
   currentLoc.addEventListener("click", () => {
     //* Current Location
@@ -361,7 +362,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 windSpeed.innerText = `${windSpeedLevel}km/h`;
 
                 // todo Complete WeatherCodes And The Description For PNG
-                weatherChanger(weatherCode, weatherCodeIcon);
+                const localHour = +time.substring(0, 2);
+                backgroundChanger(weatherCode, localHour);
+                weatherChanger(weatherCode, weatherCodeIcon, localHour);
               });
 
             //* Forecast API
@@ -395,6 +398,19 @@ document.addEventListener("DOMContentLoaded", () => {
                         swiperHourElement.innerText = `${formattedHour}:00`;
                       }
                     }
+                    //* Forecast Laptop And Desktop
+                    weatherChanger(weatherCodeHourOne, imgHourOne);
+                    weatherChanger(weatherCodeHourTwo, imgHourTwo);
+                    weatherChanger(weatherCodeHourThree, imgHourThree);
+                    weatherChanger(weatherCodeHourFour, imgHourFour);
+                    weatherChanger(weatherCodeHourFive, imgHourFive);
+
+                    //* Forecast Mobile And Tablet
+                    weatherChanger(weatherCodeHourOne, swiperImgHourOne);
+                    weatherChanger(weatherCodeHourTwo, swiperImgHourTwo);
+                    weatherChanger(weatherCodeHourThree, swiperImgHourThree);
+                    weatherChanger(weatherCodeHourFour, swiperImgHourFour);
+                    weatherChanger(weatherCodeHourFive, swiperImgHourFive);
                   });
 
                 //* Five Days Forecast
@@ -472,20 +488,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 const weatherCodeHourFive =
                   forecast.timelines.hourly[5].values.weatherCode;
 
-                //* Forecast Laptop And Desktop
-                weatherChanger(weatherCodeHourOne, imgHourOne);
-                weatherChanger(weatherCodeHourTwo, imgHourTwo);
-                weatherChanger(weatherCodeHourThree, imgHourThree);
-                weatherChanger(weatherCodeHourFour, imgHourFour);
-                weatherChanger(weatherCodeHourFive, imgHourFive);
-
-                //* Forecast Mobile And Tablet
-                weatherChanger(weatherCodeHourOne, swiperImgHourOne);
-                weatherChanger(weatherCodeHourTwo, swiperImgHourTwo);
-                weatherChanger(weatherCodeHourThree, swiperImgHourThree);
-                weatherChanger(weatherCodeHourFour, swiperImgHourFour);
-                weatherChanger(weatherCodeHourFive, swiperImgHourFive);
-
                 const tempHourOneLevel = Math.round(
                   forecast.timelines.hourly[1].values.temperature
                 );
@@ -542,8 +544,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //^ Search Icon Click
   searchIcon.addEventListener("click", () => {
-    const APIendPoint = `https://api.tomorrow.io/v4/weather/realtime?location=${searchbar.value}&apikey=P0PV92Jsk0hqTbIQlcOEjfBbKxXZxtQr`;
-    const APIendPointForecast = `https://api.tomorrow.io/v4/weather/forecast?location=${searchbar.value}&apikey=P0PV92Jsk0hqTbIQlcOEjfBbKxXZxtQr`;
+    const APIendPoint = `https://api.tomorrow.io/v4/weather/realtime?location=${searchbar.value}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
+    const APIendPointForecast = `https://api.tomorrow.io/v4/weather/forecast?location=${searchbar.value}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
     const options = { method: "GET", headers: { accept: "application/json" } };
 
     //* RealTime Weather API
@@ -558,9 +560,12 @@ document.addEventListener("DOMContentLoaded", () => {
           .then((response) => response.json())
           .then((localTime) => {
             const [date, time] = localTime.formatted.split(" ");
+            const localHour = +time.substring(0, 2);
             cityTime.innerText = time.substring(0, 5);
             cityDate.innerText = date.replaceAll("-", "/");
             cityElem.innerText = localTime.cityName;
+            backgroundChanger(weatherCode, localHour);
+            weatherChanger(weatherCode, weatherCodeIcon, localHour);
           });
         // todo Complete ERROR Handler
         //* sunSetRise API
@@ -594,8 +599,6 @@ document.addEventListener("DOMContentLoaded", () => {
         windSpeed.innerText = `${windSpeedLevel}km/h`;
 
         // todo Complete WeatherCodes And The Description For PNG
-
-        weatherChanger(weatherCode, weatherCodeIcon);
       });
     // todo Complete ERROR Handler
     //* Forecast Weather API
@@ -627,6 +630,43 @@ document.addEventListener("DOMContentLoaded", () => {
               if (hourElement && swiperHourElement) {
                 hourElement.innerText = `${formattedHour}:00`;
                 swiperHourElement.innerText = `${formattedHour}:00`;
+                //* Forecast Laptop And Desktop
+                weatherChanger(weatherCodeHourOne, imgHourOne, forecastHour);
+                weatherChanger(weatherCodeHourTwo, imgHourTwo, forecastHour);
+                weatherChanger(
+                  weatherCodeHourThree,
+                  imgHourThree,
+                  forecastHour
+                );
+                weatherChanger(weatherCodeHourFour, imgHourFour, forecastHour);
+                weatherChanger(weatherCodeHourFive, imgHourFive, forecastHour);
+
+                //* Forecast Mobile And Tablet
+                weatherChanger(
+                  weatherCodeHourOne,
+                  swiperImgHourOne,
+                  forecastHour
+                );
+                weatherChanger(
+                  weatherCodeHourTwo,
+                  swiperImgHourTwo,
+                  forecastHour
+                );
+                weatherChanger(
+                  weatherCodeHourThree,
+                  swiperImgHourThree,
+                  forecastHour
+                );
+                weatherChanger(
+                  weatherCodeHourFour,
+                  swiperImgHourFour,
+                  forecastHour
+                );
+                weatherChanger(
+                  weatherCodeHourFive,
+                  swiperImgHourFive,
+                  forecastHour
+                );
               }
             }
           });
@@ -706,20 +746,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const weatherCodeHourFive =
           forecast.timelines.hourly[5].values.weatherCode;
 
-        //* Forecast Laptop And Desktop
-        weatherChanger(weatherCodeHourOne, imgHourOne);
-        weatherChanger(weatherCodeHourTwo, imgHourTwo);
-        weatherChanger(weatherCodeHourThree, imgHourThree);
-        weatherChanger(weatherCodeHourFour, imgHourFour);
-        weatherChanger(weatherCodeHourFive, imgHourFive);
-
-        //* Forecast Mobile And Tablet
-        weatherChanger(weatherCodeHourOne, swiperImgHourOne);
-        weatherChanger(weatherCodeHourTwo, swiperImgHourTwo);
-        weatherChanger(weatherCodeHourThree, swiperImgHourThree);
-        weatherChanger(weatherCodeHourFour, swiperImgHourFour);
-        weatherChanger(weatherCodeHourFive, swiperImgHourFive);
-
         const tempHourOneLevel = Math.round(
           forecast.timelines.hourly[1].values.temperature
         );
@@ -798,6 +824,9 @@ document.addEventListener("DOMContentLoaded", () => {
               cityTime.innerText = time.substring(0, 5);
               cityDate.innerText = date.replaceAll("-", "/");
               cityElem.innerText = localTime.cityName;
+              const localHour = +time.substring(0, 2);
+              backgroundChanger(weatherCode, localHour);
+              weatherChanger(weatherCode, weatherCodeIcon, localHour);
             });
           // todo Complete ERROR Handler
           //* sunSetRise API
@@ -831,8 +860,6 @@ document.addEventListener("DOMContentLoaded", () => {
           windSpeed.innerText = `${windSpeedLevel}km/h`;
 
           // todo Complete WeatherCodes And The Description For PNG
-
-          weatherChanger(weatherCode, weatherCodeIcon);
         });
       // todo Complete ERROR Handler
       //* Forecast Weather API
@@ -866,6 +893,19 @@ document.addEventListener("DOMContentLoaded", () => {
                   swiperHourElement.innerText = `${formattedHour}:00`;
                 }
               }
+              //* Forecast Laptop And Desktop
+              weatherChanger(weatherCodeHourOne, imgHourOne);
+              weatherChanger(weatherCodeHourTwo, imgHourTwo);
+              weatherChanger(weatherCodeHourThree, imgHourThree);
+              weatherChanger(weatherCodeHourFour, imgHourFour);
+              weatherChanger(weatherCodeHourFive, imgHourFive);
+
+              //* Forecast Mobile And Tablet
+              weatherChanger(weatherCodeHourOne, swiperImgHourOne);
+              weatherChanger(weatherCodeHourTwo, swiperImgHourTwo);
+              weatherChanger(weatherCodeHourThree, swiperImgHourThree);
+              weatherChanger(weatherCodeHourFour, swiperImgHourFour);
+              weatherChanger(weatherCodeHourFive, swiperImgHourFive);
             });
 
           //* Five Days Forecast
@@ -942,20 +982,6 @@ document.addEventListener("DOMContentLoaded", () => {
             forecast.timelines.hourly[4].values.weatherCode;
           const weatherCodeHourFive =
             forecast.timelines.hourly[5].values.weatherCode;
-
-          //* Forecast Laptop And Desktop
-          weatherChanger(weatherCodeHourOne, imgHourOne);
-          weatherChanger(weatherCodeHourTwo, imgHourTwo);
-          weatherChanger(weatherCodeHourThree, imgHourThree);
-          weatherChanger(weatherCodeHourFour, imgHourFour);
-          weatherChanger(weatherCodeHourFive, imgHourFive);
-
-          //* Forecast Mobile And Tablet
-          weatherChanger(weatherCodeHourOne, swiperImgHourOne);
-          weatherChanger(weatherCodeHourTwo, swiperImgHourTwo);
-          weatherChanger(weatherCodeHourThree, swiperImgHourThree);
-          weatherChanger(weatherCodeHourFour, swiperImgHourFour);
-          weatherChanger(weatherCodeHourFive, swiperImgHourFive);
 
           const tempHourOneLevel = Math.round(
             forecast.timelines.hourly[1].values.temperature
