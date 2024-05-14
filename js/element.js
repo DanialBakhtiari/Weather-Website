@@ -100,6 +100,7 @@ const weatherChanger = (weatherCode, forecastIcon, localHour) => {
       }
       if (localHour >= 20) {
         forecastIcon.src = `../src/images/conditions/1000_clear_night_large@2x.png`;
+        description.innerText = `Clear`;
       } else {
         forecastIcon.src = `../src/images/conditions/1000_clear_large@2x.png`;
       }

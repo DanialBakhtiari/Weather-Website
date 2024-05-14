@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
           //* RealTime API
-          const APIendPoint = `https://api.tomorrow.io/v4/weather/realtime?location=${localTime.cityName}&apikey=P0PV92Jsk0hqTbIQlcOEjfBbKxXZxtQr`;
+          const APIendPoint = `https://api.tomorrow.io/v4/weather/realtime?location=${localTime.cityName}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
 
           fetch(APIendPoint, options)
             .then((response) => response.json())
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
           //* Forecast API
-          const APIendPointForecast = `https://api.tomorrow.io/v4/weather/forecast?location=${localTime.cityName}&apikey=P0PV92Jsk0hqTbIQlcOEjfBbKxXZxtQr`;
+          const APIendPointForecast = `https://api.tomorrow.io/v4/weather/forecast?location=${localTime.cityName}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
 
           fetch(APIendPointForecast, options)
             .then((response) => response.json())
@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
               });
 
             //* RealTime API
-            const APIendPoint = `https://api.tomorrow.io/v4/weather/realtime?location=${localTime.cityName}&apikey=P0PV92Jsk0hqTbIQlcOEjfBbKxXZxtQr`;
+            const APIendPoint = `https://api.tomorrow.io/v4/weather/realtime?location=${localTime.cityName}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
 
             fetch(APIendPoint, options)
               .then((response) => response.json())
@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
               });
 
             //* Forecast API
-            const APIendPointForecast = `https://api.tomorrow.io/v4/weather/forecast?location=${localTime.cityName}&apikey=P0PV92Jsk0hqTbIQlcOEjfBbKxXZxtQr`;
+            const APIendPointForecast = `https://api.tomorrow.io/v4/weather/forecast?location=${localTime.cityName}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
 
             fetch(APIendPointForecast, options)
               .then((response) => response.json())
@@ -802,8 +802,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Enter") {
       event.preventDefault();
 
-      const APIendPoint = `https://api.tomorrow.io/v4/weather/realtime?location=${searchbar.value}&apikey=P0PV92Jsk0hqTbIQlcOEjfBbKxXZxtQr`;
-      const APIendPointForecast = `https://api.tomorrow.io/v4/weather/forecast?location=${searchbar.value}&apikey=P0PV92Jsk0hqTbIQlcOEjfBbKxXZxtQr`;
+      const APIendPoint = `https://api.tomorrow.io/v4/weather/realtime?location=${searchbar.value}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
+      const APIendPointForecast = `https://api.tomorrow.io/v4/weather/forecast?location=${searchbar.value}&apikey=18IdHwHitUX1eZm3w4PwFq9nG9Vy2gJ0`;
       const options = {
         method: "GET",
         headers: { accept: "application/json" },
